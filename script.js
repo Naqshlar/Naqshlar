@@ -19,7 +19,6 @@ async function detectLanguageByIP() {
         const response = await fetch('https://ipinfo.io/json');
         const data = await response.json();
         const country = data.country; // For example, "RU", "UZ", "GB"
-        console.log('Country from IP:', country); // For debugging
 
         const countryToLang = {
             "UZ": "uz",
@@ -42,7 +41,13 @@ function setLanguage(lang, translations) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
+            if (key === 'introduction') {  // Специальная обработка для введения
+                const text = translations[lang][key];
+                const paragraphs = text.split('\n').filter(p => p.trim() !== '').map(p => `<p>${p}</p>`).join('');
+                element.innerHTML = paragraphs;
+            } else {
+                element.textContent = translations[lang][key];
+            }
         }
     });
 
@@ -65,14 +70,20 @@ function setLanguage(lang, translations) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    const placeholder = document.getElementById('lang-switcher-placeholder');
+    const response = await fetch('header.html');
+    if (response.ok) {
+        const headerContent = await response.text();
+        placeholder.innerHTML = headerContent;
+    } else {
+        console.error('Failed to load header.html');
+    }
+    
     const translations = await loadTranslations();
     let savedLang = localStorage.getItem('selectedLanguage');
-    console.log('savedLang:', savedLang); // For debugging
 
     if (!savedLang) {
-        console.log('1'); // Logged if savedLang is missing
         savedLang = await detectLanguageByIP(); // Auto-detection
-        console.log('2'); // Logged after language detection
     }
 
     setLanguage(savedLang, translations);

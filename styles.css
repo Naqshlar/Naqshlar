@@ -160,3 +160,53 @@ nav ul li.full-width {
 .lang-switcher.active .lang-options {
     display: block;
 }
+
+/* Style for elements with multi-line text */
+[data-i18n="introduction"] {
+    font-size: 18px;
+    white-space: pre-line;  /* Preserves line breaks from \n */
+}
+
+/* New styles for <main> and the text inside */
+main {
+    max-width: 800px;  /* Limit text width (can use 60ch for better readability) */
+    margin: 0 auto;    /* Center horizontally */
+    padding: 0 15px;   /* Add side padding for mobile */
+}
+
+/* Styles for the introduction paragraph (for extra customization) */
+[data-i18n="introduction"] {
+    text-align: justify;  /* Justify text for nicer look */
+    line-height: 1.8;     /* Increased line height for readability */
+}
+
+/* Mobile adaptation: remove width limit on small screens */
+@media (max-width: 768px) {
+    main {
+        max-width: 100%;  /* Text takes full screen width */
+        padding: 0 10px;  /* Smaller side padding for mobile */
+    }
+}
+
+/* Styles for paragraphs inside the introduction */
+[data-i18n="introduction"] p {
+    text-indent: 2em;        /* Indent at the beginning of a paragraph */
+    margin: 0 0 1em 0;       /* Bottom margin to separate paragraphs */
+    line-height: 1.8;        /* Line height for readability */
+    text-align: justify;     /* Justify text */
+    hyphens: auto;           /* Automatic word hyphenation */
+    -webkit-hyphens: auto;   /* Support for Webkit browsers (Chrome, Safari) */
+    -ms-hyphens: auto;       /* Support for IE */
+    word-break: break-word;  /* Additionally break long words if needed */
+}
+
+/* Mobile adaptation */
+@media (max-width: 768px) {
+    [data-i18n="introduction"] p {
+        text-indent: 1em;       /* Smaller indent at the beginning */
+        margin-bottom: 0.8em;   /* Smaller space between paragraphs */
+        hyphens: auto;          /* Ensure hyphenation works on mobile */
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+    }
+}
