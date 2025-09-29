@@ -94,6 +94,19 @@ nav ul li.full-width {
     font-size: 14px;
 }
 
+/* Add down arrow to indicate dropdown */
+.lang-switcher::after {
+    content: '▼';
+    margin-left: 5px;
+    font-size: 12px;
+    color: #0099cc;
+}
+
+/* Change arrow to up when active (optional, for better UX) */
+.lang-switcher.active::after {
+    content: '▲';
+}
+
 /* Flags (images) */
 .flag {
     display: inline-block;

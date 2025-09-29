@@ -50,9 +50,9 @@ function setLanguage(lang, translations) {
     const currentFlag = document.getElementById('current-flag');
     const currentLang = document.getElementById('current-lang');
     const langMap = {
-        'uz': { flagClass: 'uz', text: 'O‘zbekcha' },
-        'ru': { flagClass: 'ru', text: 'Русский' },
-        'en': { flagClass: 'en', text: 'English' }
+        'uz': { flagClass: 'uz', text: '' },
+        'ru': { flagClass: 'ru', text: '' },
+        'en': { flagClass: 'en', text: '' }
     };
     currentFlag.className = `flag ${langMap[lang].flagClass}`;
     currentLang.textContent = langMap[lang].text;
