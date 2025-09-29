@@ -1,3 +1,4 @@
+// Function to load translations
 async function loadTranslations() {
     try {
         const response = await fetch('translations.json');
@@ -7,11 +8,36 @@ async function loadTranslations() {
         const translations = await response.json();
         return translations;
     } catch (error) {
-        console.error('Ошибка загрузки переводов:', error);
+        console.error('Error loading translations:', error);
         return {};
     }
 }
 
+// Function to detect language by IP (example using a public API)
+async function detectLanguageByIP() {
+    try {
+        const response = await fetch('https://ipinfo.io/json');
+        const data = await response.json();
+        const country = data.country; // For example, "RU", "UZ", "GB"
+        console.log('Country from IP:', country); // For debugging
+
+        const countryToLang = {
+            "UZ": "uz",
+            "RU": "ru",
+            "KZ": "ru",
+            "GB": "en",
+            "US": "en",
+            // Add other countries if needed
+        };
+
+        return countryToLang[country] || "en"; // Fallback: English
+    } catch (error) {
+        console.error('Error detecting language by IP:', error);
+        return "en";
+    }
+}
+
+// Function to set language
 function setLanguage(lang, translations) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
@@ -20,7 +46,7 @@ function setLanguage(lang, translations) {
         }
     });
 
-    // Обновляем отображаемый язык и флаг
+    // Update the displayed language and flag
     const currentFlag = document.getElementById('current-flag');
     const currentLang = document.getElementById('current-lang');
     const langMap = {
@@ -34,19 +60,24 @@ function setLanguage(lang, translations) {
     document.getElementById('lang-select').value = lang;
     localStorage.setItem('selectedLanguage', lang);
 
-    // Скрываем дропдаун после выбора
+    // Hide the dropdown after selection
     document.getElementById('lang-switcher').classList.remove('active');
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
     const translations = await loadTranslations();
-    const langSwitcher = document.getElementById('lang-switcher');
-    const langSelect = document.getElementById('lang-select');
+    let savedLang = localStorage.getItem('selectedLanguage');
+    console.log('savedLang:', savedLang); // For debugging
 
-    const savedLang = localStorage.getItem('selectedLanguage') || 'uz';
+    if (!savedLang) {
+        console.log('1'); // Logged if savedLang is missing
+        savedLang = await detectLanguageByIP(); // Auto-detection
+        console.log('2'); // Logged after language detection
+    }
+
     setLanguage(savedLang, translations);
 
-    // Генерация дропдауна
+    // Generate dropdown
     const langOptions = `
         <div class="lang-options">
             <div class="lang-option" data-lang="uz"><span class="flag uz"></span> O‘zbekcha</div>
@@ -54,15 +85,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             <div class="lang-option" data-lang="en"><span class="flag en"></span> English</div>
         </div>
     `;
-    langSwitcher.insertAdjacentHTML('beforeend', langOptions);
+    document.getElementById('lang-switcher').insertAdjacentHTML('beforeend', langOptions);
 
-    // Обработчик клика для открытия/закрытия дропдауна
-    langSwitcher.addEventListener('click', (event) => {
-        langSwitcher.classList.toggle('active');
+    // Handler for opening/closing the dropdown on click
+    document.getElementById('lang-switcher').addEventListener('click', (event) => {
+        document.getElementById('lang-switcher').classList.toggle('active');
     });
 
-    // Обработчик выбора языка
-    langSwitcher.addEventListener('click', (event) => {
+    // Handler for language selection
+    document.getElementById('lang-switcher').addEventListener('click', (event) => {
         const option = event.target.closest('.lang-option');
         if (option) {
             const selectedLang = option.getAttribute('data-lang');
@@ -70,15 +101,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Закрытие дропдауна при клике вне его
+    // Close the dropdown on click outside
     document.addEventListener('click', (event) => {
+        const langSwitcher = document.getElementById('lang-switcher');
         if (!langSwitcher.contains(event.target)) {
             langSwitcher.classList.remove('active');
         }
     });
 
-    // Синхронизация с нативным select для доступности
-    langSelect.addEventListener('change', (event) => {
+    // Synchronization with native select for accessibility
+    document.getElementById('lang-select').addEventListener('change', (event) => {
         setLanguage(event.target.value, translations);
     });
 });

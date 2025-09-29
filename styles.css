@@ -69,19 +69,19 @@ nav ul li.full-width {
     margin-bottom: 0.5cm; /* bottom spacing of 0.5 cm */
 }
 
-/* Основной контейнер для выравнивания справа */
+/* Main container for right alignment */
 .lang-switcher-container {
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
-/* Скрытый нативный select */
+/* Hidden native select */
 #lang-select {
     display: none;
 }
 
-/* Кастомный селектор (триггер) */
+/* Custom selector (trigger) */
 .lang-switcher {
     position: relative;
     display: flex;
@@ -94,7 +94,7 @@ nav ul li.full-width {
     font-size: 14px;
 }
 
-/* Флаги (изображения) */
+/* Flags (images) */
 .flag {
     display: inline-block;
     width: 20px;
@@ -117,7 +117,7 @@ nav ul li.full-width {
     background-image: url('flags/united-kingdom.png');
 }
 
-/* Список языков (дропдаун) */
+/* Language list (dropdown) */
 .lang-options {
     display: none;
     position: absolute;
@@ -131,7 +131,7 @@ nav ul li.full-width {
     z-index: 1000;
 }
 
-/* Элементы списка */
+/* List elements */
 .lang-option {
     padding: 5px 10px;
     cursor: pointer;
@@ -143,7 +143,7 @@ nav ul li.full-width {
     background-color: #f0f0f0;
 }
 
-/* Показать дропдаун при клике */
+/* Show dropdown on click */
 .lang-switcher.active .lang-options {
     display: block;
 }
