@@ -7,26 +7,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div class="lang-switcher-container">
+    <div class="lang-switcher" id="lang-switcher">
+        <span class="flag" id="current-flag">🇺🇿</span> <span id="current-lang">O‘zbekcha</span>
+    </div>
+    <select id="lang-select" aria-label="Choose language" style="display: none;">
+        <option value="uz">O‘zbekcha</option>
+        <option value="ru">Русский</option>
+        <option value="en">English</option>
+    </select>
+</div>
+
 <header>
-    <h1>Download ornaments</h1>
+    <h1 data-i18n="title">File download</h1>
 </header>
 
 <main>
     <nav aria-label="Naqshlar list">
         <ul>
-            <li class="full-width"><a href="files/naqshlar.zip" download>Download all</a></li>
-            <li><a href="files/orn1.stl" download>Naqshlar №1</a></li>
-            <li><a href="files/orn2.stl" download>Naqshlar №2</a></li>
-            <li><a href="files/orn3.stl" download>Naqshlar №3</a></li>
-            <li><a href="files/orn4.stl" download>Naqshlar №4</a></li>
-            <li><a href="files/orn5.stl" download>Naqshlar №5</a></li>
-            <li><a href="files/orn6.stl" download>Naqshlar №6</a></li>
-            <li><a href="files/orn7.stl" download>Naqshlar №7</a></li>
-            <li><a href="files/orn8.stl" download>Naqshlar №8</a></li>
-            <li><a href="files/orn9.stl" download>Naqshlar №9</a></li>
-            <li><a href="files/orn10.stl" download>Naqshlar №10</a></li>
-            <li><a href="files/orn11.stl" download>Naqshlar №11</a></li>
-            <li><a href="files/orn12.stl" download>Naqshlar №12</a></li>
+            <li class="full-width"><a href="files/naqshlar.zip" download data-i18n="downloadAll">Download all</a></li>
+            <li><a href="files/orn1.stl" download data-i18n="orn1">Naqshlar №1</a></li>
+            <li><a href="files/orn2.stl" download data-i18n="orn2">Naqshlar №2</a></li>
+            <li><a href="files/orn3.stl" download data-i18n="orn3">Naqshlar №3</a></li>
+            <li><a href="files/orn4.stl" download data-i18n="orn4">Naqshlar №4</a></li>
+            <li><a href="files/orn5.stl" download data-i18n="orn5">Naqshlar №5</a></li>
+            <li><a href="files/orn6.stl" download data-i18n="orn6">Naqshlar №6</a></li>
+            <li><a href="files/orn7.stl" download data-i18n="orn7">Naqshlar №7</a></li>
+            <li><a href="files/orn8.stl" download data-i18n="orn8">Naqshlar №8</a></li>
+            <li><a href="files/orn9.stl" download data-i18n="orn9">Naqshlar №9</a></li>
+            <li><a href="files/orn10.stl" download data-i18n="orn10">Naqshlar №10</a></li>
+            <li><a href="files/orn11.stl" download data-i18n="orn11">Naqshlar №11</a></li>
+            <li><a href="files/orn12.stl" download data-i18n="orn12">Naqshlar №12</a></li>
         </ul>
     </nav>
 </main>
@@ -34,5 +46,7 @@
 <footer>
     <p>2025 Naqshlar</p>
 </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

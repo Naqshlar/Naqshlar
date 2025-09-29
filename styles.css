@@ -68,3 +68,82 @@ nav ul li.full-width {
     grid-column: 1 / -1;   /* spans the whole row */
     margin-bottom: 0.5cm; /* bottom spacing of 0.5 cm */
 }
+
+/* Основной контейнер для выравнивания справа */
+.lang-switcher-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Скрытый нативный select */
+#lang-select {
+    display: none;
+}
+
+/* Кастомный селектор (триггер) */
+.lang-switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+/* Флаги (изображения) */
+.flag {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-size: cover;
+    background-position: center;
+    vertical-align: middle;
+}
+
+.flag.uz {
+    background-image: url('flags/uzbekistan.png');
+}
+
+.flag.ru {
+    background-image: url('flags/russia.png');
+}
+
+.flag.en {
+    background-image: url('flags/united-kingdom.png');
+}
+
+/* Список языков (дропдаун) */
+.lang-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Элементы списка */
+.lang-option {
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.lang-option:hover {
+    background-color: #f0f0f0;
+}
+
+/* Показать дропдаун при клике */
+.lang-switcher.active .lang-options {
+    display: block;
+}

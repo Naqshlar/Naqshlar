@@ -1,0 +1,50 @@
+{
+  "uz": {
+    "title": "Fayllarni yuklab olish",
+    "downloadAll": "Hammasini yuklab olish",
+    "orn1": "Naqshlar №1",
+    "orn2": "Naqshlar №2",
+    "orn3": "Naqshlar №3",
+    "orn4": "Naqshlar №4",
+    "orn5": "Naqshlar №5",
+    "orn6": "Naqshlar №6",
+    "orn7": "Naqshlar №7",
+    "orn8": "Naqshlar №8",
+    "orn9": "Naqshlar №9",
+    "orn10": "Naqshlar №10",
+    "orn11": "Naqshlar №11",
+    "orn12": "Naqshlar №12"
+  },
+  "ru": {
+    "title": "Скачивание файлов",
+    "downloadAll": "Скачать все",
+    "orn1": "Узор №1",
+    "orn2": "Узор №2",
+    "orn3": "Узор №3",
+    "orn4": "Узор №4",
+    "orn5": "Узор №5",
+    "orn6": "Узор №6",
+    "orn7": "Узор №7",
+    "orn8": "Узор №8",
+    "orn9": "Узор №9",
+    "orn10": "Узор №10",
+    "orn11": "Узор №11",
+    "orn12": "Узор №12"
+  },
+  "en": {
+    "title": "File download",
+    "downloadAll": "Download all",
+    "orn1": "Ornament №1",
+    "orn2": "Ornament №2",
+    "orn3": "Ornament №3",
+    "orn4": "Ornament №4",
+    "orn5": "Ornament №5",
+    "orn6": "Ornament №6",
+    "orn7": "Ornament №7",
+    "orn8": "Ornament №8",
+    "orn9": "Ornament №9",
+    "orn10": "Ornament №10",
+    "orn11": "Ornament №11",
+    "orn12": "Ornament №12"
+  }
+}
