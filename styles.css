@@ -4,8 +4,10 @@ body {
     margin: 0;
     padding: 20px;
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #505050;
+    /*background-color: #f9f9f9;*/
+    /*color: #505050;*/
+    background-color: #2e2e2e;
+    color: #cacaca;
 }
 
 /* Header */
@@ -29,8 +31,10 @@ nav ul li a {
     display: block;
     padding: 15px;
     text-align: center;
-    background-color: #0099cc;
-    color: #fff;
+    /*background-color: #0099cc;*/
+    /*color: #fff;*/
+    background-color: #143d4c;
+    color: #e1e1e1;
     text-decoration: none;
     border-radius: 6px;
     font-size: 16px;
@@ -42,9 +46,10 @@ nav ul li a {
 /* Hover and focus for accessibility */
 nav ul li a:hover,
 nav ul li a:focus {
-    background-color: #004599;
-    outline: 3px solid #222;
-    outline-offset: 2px;
+    /*background-color: #004599;*/
+    background-color: #144c42;
+    /*outline: 3px solid #222;*/
+    /*outline-offset: 2px;*/
     transform: translateY(-2px);
 }
 
@@ -100,7 +105,8 @@ nav ul li.full-width {
     content: '▼';
     margin-left: 5px;
     font-size: 12px;
-    color: #0099cc;
+    color: #4a93ac;
+    /*color: #0099cc;*/
 }
 
 /* Change arrow to up when active (optional, for better UX) */
