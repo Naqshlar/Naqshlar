@@ -33,7 +33,7 @@ nav ul li a {
     text-align: center;
     /*background-color: #0099cc;*/
     /*color: #fff;*/
-    background-color: #143d4c;
+    background-color: #1c4a5c;
     color: #e1e1e1;
     text-decoration: none;
     border-radius: 6px;
@@ -47,7 +47,7 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a:focus {
     /*background-color: #004599;*/
-    background-color: #144c42;
+    background-color: #1c5c50;
     /*outline: 3px solid #222;*/
     /*outline-offset: 2px;*/
     transform: translateY(-2px);
@@ -94,9 +94,11 @@ nav ul li.full-width {
     align-items: center;
     cursor: pointer;
     padding: 5px 10px;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
+    /*background-color: #fff;*/
+    background-color: #272727;
+    border: 1px solid #202020;
     border-radius: 4px;
-    background-color: #fff;
     font-size: 14px;
 }
 
@@ -143,8 +145,10 @@ nav ul li.full-width {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    /*background-color: #fff;*/
+    /*border: 1px solid #ccc;*/
+    background-color: #272727;
+    border: 1px solid #202020;
     border-radius: 4px;
     min-width: 150px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -160,7 +164,8 @@ nav ul li.full-width {
 }
 
 .lang-option:hover {
-    background-color: #f0f0f0;
+    /*background-color: #f0f0f0;*/
+    background-color: #3c3c3c;
 }
 
 /* Show dropdown on click */
