@@ -110,6 +110,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.error('Error loading header.html:', e);
         }
     }
+    
+    const isDynamic = document.querySelector('#ornament-title') !== null;
+    if (isDynamic) {
+        return;
+    }
 
     // Detect or load saved language
     let savedLang = null;
