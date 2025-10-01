@@ -264,3 +264,7 @@ main {
         -ms-hyphens: auto;
     }
 }
+
+body.preload {
+    visibility: hidden;
+}

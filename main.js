@@ -88,6 +88,9 @@ function setLanguage(lang, translations) {
     if (langSwitcher) {
         langSwitcher.classList.remove('active');
     }
+    
+    document.body.classList.remove("preload");
+    document.getElementById("content").removeAttribute("aria-busy");
 }
 
 // Initialize when the DOM is ready

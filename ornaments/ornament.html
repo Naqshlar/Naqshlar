@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body>
+<body class="preload">
+
 <header>
     <h1 id="ornament-title">Ornament</h1>
 </header>
 
-<main>
+<main id="content" aria-busy="true">
     <p id="ornament-description"></p>
 
     <nav aria-label="Naqshlar list">
@@ -23,7 +24,6 @@
         </ul>
     </nav>
 
-    <!-- Previous / Next navigation — standalone container (не список) -->
     <nav aria-label="Ornament navigation">
         <div class="nav-buttons" role="navigation" aria-label="Previous and next ornament">
             <a href="#" id="prev-link" class="btn small-btn" data-i18n="prev">⬅ Previous</a>
@@ -35,7 +35,8 @@
 
     <nav aria-label="Home">
         <ul>
-            <li class="full-width"><a href=".." data-i18n="home">Ornaments</a></li>
+            <li><a href="index.html" data-i18n="ornamentList">List of ornaments</a></li>
+            <li><a href=".." data-i18n="home">Home page</a></li>
         </ul>
     </nav>
 

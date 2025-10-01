@@ -17,8 +17,42 @@
   "home": "На главную",
   "prev": "⬅ Предыдущий",
   "next": "Следующий ➡",
+  "ornamentList": "Список узоров",
+
   "ornament1.title": "Мажнун-Бед\n(Плакучая Ива)",
   "ornament1.description": "TODO ornament1.description ru",
+
   "ornament2.title": "Лола\n(Тюльпан)",
-  "ornament2.description": "TODO ornament2.description ru"
+  "ornament2.description": "TODO ornament2.description ru",
+
+  "ornament3.title": "Туморча\n(Амулет)",
+  "ornament3.description": "TODO ornament3.description ru",
+
+  "ornament4.title": "Ромб",
+  "ornament4.description": "TODO ornament4.description ru",
+
+  "ornament5.title": "Калампир Нусха\n(Узор Перца)",
+  "ornament5.description": "TODO ornament5.description ru",
+
+  "ornament6.title": "Се Каламфур\n(Три Перчика)",
+  "ornament6.description": "TODO ornament6.description ru",
+
+  "ornament7.title": "Калкон Нухса Халы Гилам",
+  "ornament7.description": "TODO ornament7.description ru",
+
+  "ornament8.title": "Кузача\n(Кувшинчик)",
+  "ornament8.description": "TODO ornament8.description ru",
+
+  "ornament9.title": "Вихревая Розетка",
+  "ornament9.description": "TODO ornament9.description ru",
+
+  "ornament10.title": "Кучкоршохи Нусха\n(Рога Барана)",
+  "ornament10.description": "TODO ornament10.description ru",
+
+  "ornament11.title": "Рафида",
+  "ornament11.description": "TODO ornament11.description ru",
+
+  "ornament12.title": "Калкон Ой Нусха\n(Щит И Луна)",
+  "ornament12.description": "TODO ornament12.description ru"
+
 }

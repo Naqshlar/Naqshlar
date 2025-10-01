@@ -5,10 +5,9 @@ async function loadOrnamentPage() {
     const res = await fetch("ornaments.json");
     const ornaments = await res.json();
 
-    // Берём сохранённый язык
     const lang = localStorage.getItem("selectedLanguage") || "en";
 
-    // Загружаем переводы
+    // Loading translations
     const trRes = await fetch(`i18n/${lang}.json`);
     const translations = await trRes.json();
 
@@ -19,7 +18,7 @@ async function loadOrnamentPage() {
         return;
     }
 
-    // Подставляем переводы
+    // Apply translations
     document.getElementById("ornament-title").innerText =
         translations[item.key + ".title"] || "Untitled";
     document.getElementById("ornament-description").innerText =
@@ -44,6 +43,9 @@ async function loadOrnamentPage() {
         nextLink.classList.add("disabled");
         nextLink.removeAttribute("href");
     }
+
+    document.body.classList.remove("preload");
+    document.getElementById("content")?.removeAttribute("aria-busy");
 }
 
 document.addEventListener("DOMContentLoaded", loadOrnamentPage);

@@ -17,8 +17,42 @@
   "home": "Home page",
   "prev": "⬅ Previous",
   "next": "Next ➡",
-  "ornament1.title": "TODO ornament1.title en",
+  "ornamentList": "List of ornaments",
+  
+  "ornament1.title": "TODO Ornament №1",
   "ornament1.description": "TODO ornament1.description en",
-  "ornament2.title": "TODO ornament2.title en",
-  "ornament2.description": "TODO ornament2.description en"
+
+  "ornament2.title": "TODO Ornament №2",
+  "ornament2.description": "TODO ornament2.description en",
+
+  "ornament3.title": "TODO Ornament №3",
+  "ornament3.description": "TODO ornament3.description en",
+
+  "ornament4.title": "TODO Ornament №4",
+  "ornament4.description": "TODO ornament4.description en",
+
+  "ornament5.title": "TODO Ornament №5",
+  "ornament5.description": "TODO ornament5.description en",
+
+  "ornament6.title": "TODO Ornament №6",
+  "ornament6.description": "TODO ornament6.description en",
+
+  "ornament7.title": "TODO Ornament №7",
+  "ornament7.description": "TODO ornament7.description en",
+
+  "ornament8.title": "TODO Ornament №8",
+  "ornament8.description": "TODO ornament8.description en",
+
+  "ornament9.title": "TODO Ornament №9",
+  "ornament9.description": "TODO ornament9.description en",
+
+  "ornament10.title": "TODO Ornament №10",
+  "ornament10.description": "TODO ornament10.description en",
+
+  "ornament11.title": "TODO Ornament №11",
+  "ornament11.description": "TODO ornament11.description en",
+
+  "ornament12.title": "TODO Ornament №12",
+  "ornament12.description": "TODO ornament12.description en"
+
 }
