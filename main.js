@@ -59,7 +59,7 @@ function setLanguage(lang, translations) {
 
     const catalogueLink = document.querySelector('a[data-i18n="downloadCatalogue"]');
     if (catalogueLink) {
-        catalogueLink.href = `catalogue/ornaments_catalog_${lang}.pdf`;
+        catalogueLink.href = `catalogues/ornaments_catalog_${lang}.pdf`;
     }
 
     // Update the current flag and language text
