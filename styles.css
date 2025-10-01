@@ -53,6 +53,48 @@ nav ul li a:focus {
     transform: translateY(-2px);
 }
 
+nav ul li a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    background-color: #444; /* тусклее */
+}
+
+/* Container: keep items on one line; allow horizontal scroll if too narrow.
+   We purposely do NOT wrap: user requested same-line on mobile & desktop. */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.nav-buttons a {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    background-color: #1c4a5c;
+    color: #e1e1e1;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase;
+}
+
+/* Hover */
+.nav-buttons a:hover,
+.nav-buttons a:focus {
+    background-color: #1c5c50;
+    transform: translateY(-2px);
+}
+
+.nav-buttons a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    background-color: #444; /* тусклее */
+}
+
 /* Mobile responsiveness */
 @media (max-width: 480px) {
     nav ul li a {

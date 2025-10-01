@@ -1,5 +1,6 @@
 {
   "title": "Узоры",
+  "download": "Скачать",
   "downloadAll": "Скачать все",
   "orn1": "1. Мажнун-Бед (Плакучая Ива)",
   "orn2": "2. Лола (Тюльпан)",
@@ -13,5 +14,11 @@
   "orn10": "10. Кучкоршохи Нусха (Рога Барана)",
   "orn11": "11. Рафида",
   "orn12": "12. Калкон Ой Нусха (Щит И Луна)",
-  "home": "На главную"
+  "home": "На главную",
+  "prev": "⬅ Предыдущий",
+  "next": "Следующий ➡",
+  "ornament1.title": "Мажнун-Бед\n(Плакучая Ива)",
+  "ornament1.description": "TODO ornament1.description ru",
+  "ornament2.title": "Лола\n(Тюльпан)",
+  "ornament2.description": "TODO ornament2.description ru"
 }

@@ -1,5 +1,6 @@
 {
   "title": "Ornaments",
+  "download": "Download",
   "downloadAll": "Download all",
   "orn1": "TODO Ornament №1",
   "orn2": "TODO Ornament №2",
@@ -13,5 +14,11 @@
   "orn10": "TODO Ornament №10",
   "orn11": "TODO Ornament №11",
   "orn12": "TODO Ornament №12",
-  "home": "Home page"
+  "home": "Home page",
+  "prev": "⬅ Previous",
+  "next": "Next ➡",
+  "ornament1.title": "TODO ornament1.title en",
+  "ornament1.description": "TODO ornament1.description en",
+  "ornament2.title": "TODO ornament2.title en",
+  "ornament2.description": "TODO ornament2.description en"
 }

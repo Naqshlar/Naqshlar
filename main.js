@@ -36,8 +36,11 @@ async function detectLanguageByIP() {
 
 // Function to apply translations to the page
 function setLanguage(lang, translations) {
+    // localStorage.setItem("lang", lang);
+    // loadTranslations(lang); // твоя функция подстановки переводов
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
+        // debugger;
         if (translations[key]) {
             if (key === 'introduction') {
                 // Special case: split into paragraphs

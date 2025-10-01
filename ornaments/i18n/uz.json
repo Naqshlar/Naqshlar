@@ -1,5 +1,6 @@
 {
   "title": "Naqshlar",
+  "download": "TODO",
   "downloadAll": "Hammasini yuklab olish",
   "orn1": "1. Majnun-Bеd",
   "orn2": "2. Lola",
@@ -13,5 +14,11 @@
   "orn10": "10. Qo‘chqоr Shохi Nusхa",
   "orn11": "11. Rafida",
   "orn12": "12. Qalqоn Oy Nusхa",
-  "home": "TODO"
+  "home": "TODO",
+  "prev": "⬅ TODO",
+  "next": "TODO ➡",
+  "ornament1.title": "Majnun-Bеd",
+  "ornament1.description": "TODO ornament1.description uz",
+  "ornament2.title": "Lola",
+  "ornament2.description": "TODO ornament2.description uz"
 }

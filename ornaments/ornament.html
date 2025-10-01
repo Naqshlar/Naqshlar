@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naqshlar</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+<header>
+    <h1 id="ornament-title">Ornament</h1>
+</header>
+
+<main>
+    <p id="ornament-description"></p>
+
+    <nav aria-label="Naqshlar list">
+        <ul>
+            <li class="full-width">
+                <a id="download-btn" href="" download data-i18n="download">Download</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Previous / Next navigation — standalone container (не список) -->
+    <nav aria-label="Ornament navigation">
+        <div class="nav-buttons" role="navigation" aria-label="Previous and next ornament">
+            <a href="#" id="prev-link" class="btn small-btn" data-i18n="prev">⬅ Previous</a>
+            <a href="#" id="next-link" class="btn small-btn" data-i18n="next">Next ➡</a>
+        </div>
+    </nav>
+
+    <br>
+
+    <nav aria-label="Home">
+        <ul>
+            <li class="full-width"><a href=".." data-i18n="home">Ornaments</a></li>
+        </ul>
+    </nav>
+
+</main>
+
+<footer><p>2025 Naqshlar</p></footer>
+
+<script src="../main.js"></script>
+<script src="ornament.js"></script>
+</body>
+</html>
