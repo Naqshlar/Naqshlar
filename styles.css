@@ -114,7 +114,6 @@ footer {
 /* Special style for the first button */
 nav ul li.full-width {
     grid-column: 1 / -1;   /* spans the whole row */
-    margin-bottom: 0.5cm; /* bottom spacing of 0.5 cm */
 }
 
 /* Main container for right alignment */

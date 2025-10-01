@@ -57,6 +57,11 @@ function setLanguage(lang, translations) {
         }
     });
 
+    const catalogueLink = document.querySelector('a[data-i18n="downloadCatalogue"]');
+    if (catalogueLink) {
+        catalogueLink.href = `catalogue/ornaments_catalog_${lang}.pdf`;
+    }
+
     // Update the current flag and language text
     const currentFlag = document.getElementById('current-flag');
     const currentLang = document.getElementById('current-lang');
