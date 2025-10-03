@@ -1,62 +1,62 @@
 [
   {
     "id": 1,
-    "file": "1_majnun-bed.stl",
+    "filename": "1_majnun-bed",
     "key": "ornament1"
   },
   {
     "id": 2,
-    "file": "2_lola.stl",
+    "filename": "2_lola",
     "key": "ornament2"
   },
   {
     "id": 3,
-    "file": "3_tumоrcha.stl",
+    "filename": "3_tumоrcha",
     "key": "ornament3"
   },
   {
     "id": 4,
-    "file": "4_rоmb.stl",
+    "filename": "4_rоmb",
     "key": "ornament4"
   },
   {
     "id": 5,
-    "file": "5_kalampir_nusхa.stl",
+    "filename": "5_kalampir_nusхa",
     "key": "ornament5"
   },
   {
     "id": 6,
-    "file": "6_sе_qalamfur.stl",
+    "filename": "6_sе_qalamfur",
     "key": "ornament6"
   },
   {
     "id": 7,
-    "file": "7_qalqоn_nusхa_naqshli_gilam.stl",
+    "filename": "7_qalqоn_nusхa_naqshli_gilam",
     "key": "ornament7"
   },
   {
     "id": 8,
-    "file": "8_ko‘zacha.stl",
+    "filename": "8_ko‘zacha",
     "key": "ornament8"
   },
   {
     "id": 9,
-    "file": "9_uyurma_to‘pbarggul.stl",
+    "filename": "9_uyurma_to‘pbarggul",
     "key": "ornament9"
   },
   {
     "id": 10,
-    "file": "10_qo‘chqоr_shохi_nusхa.stl",
+    "filename": "10_qo‘chqоr_shохi_nusхa",
     "key": "ornament10"
   },
   {
     "id": 11,
-    "file": "11_rafida.stl",
+    "filename": "11_rafida",
     "key": "ornament11"
   },
   {
     "id": 12,
-    "file": "12_qalqоn_оy_nusхa.stl",
+    "filename": "12_qalqоn_оy_nusхa",
     "key": "ornament12"
   }
 ]

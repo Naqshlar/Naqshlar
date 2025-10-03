@@ -1,6 +1,6 @@
 {
   "title": "Узоры",
-  "download": "Скачать",
+  "download": "Скачать модель для печати (.stl)",
   "downloadAll": "Скачать все",
   "orn1": "1. Мажнун-Бед (Плакучая Ива)",
   "orn2": "2. Лола (Тюльпан)",
@@ -18,41 +18,45 @@
   "prev": "❮ Предыдущий",
   "next": "Следующий ❯",
   "ornamentList": "Список узоров",
+  "descriptionLabel": "Тифлокомментарий",
 
   "ornament1.title": "Мажнун-Бед\n(Плакучая Ива)",
-  "ornament1.description": "TODO ornament1.description ru",
+  "ornament1.context": "В XIX – XX веках женщины Бухары носили калтапушак, а поверх него - пешонабанд с золотой вышивкой.\nКалтапушак - это женская шапочка круглой формы. Она сшита так, что сзади на её внутренней стороне есть кармашек, в который можно спрятать длинные волосы. Калтапушак часто украшают вышитыми лентами. Пешонабанд - это особая налобная повязка бухарских женщин. Она похожа на ленту, на которой золотыми нитками вышивали узоры. Пешонабанд часто повязывают на шапочку калтапушак.\nГлавным орнаментом такой вышивки был узор мажнун-бед. Мажнун - имя нарицательное для горюющего юноши, означающее «одержимый». В фольклоре ива воспринимается как символ печали и нежности. По мнению специалистов, мастерицы вышивали этот узор, чтобы передать чувства к своему возлюбленному.",
+  "ornament1.alt": "Орнамент «Мажнун-Бед» (Плакучая ива). Подробное описание ниже.",
+  "ornament1.caption": "Золотошвейное искусство\nБухара",
+  "ornament1.description": "Орнамент похож на медальон с восемью углами. В его центре - равносторонний крест, который делит восьмигранник на четыре равные части. Каждая сторона креста заканчивается завитками, похожимина рога, направленные к центру. Весь орнамент исполнен в красных, жёлтых, бежевых, грязно-розовых, зелёных и тёмно-синих цветах.",
 
   "ornament2.title": "Лола\n(Тюльпан)",
-  "ornament2.description": "TODO ornament2.description ru",
+  "ornament2.context": "TODO ornament2.context ru",
 
   "ornament3.title": "Туморча\n(Амулет)",
-  "ornament3.description": "TODO ornament3.description ru",
+  "ornament3.context": "TODO ornament3.context ru",
 
   "ornament4.title": "Ромб",
-  "ornament4.description": "TODO ornament4.description ru",
+  "ornament4.context": "TODO ornament4.context ru",
 
   "ornament5.title": "Калампир Нусха\n(Узор Перца)",
-  "ornament5.description": "TODO ornament5.description ru",
+  "ornament5.context": "TODO ornament5.context ru",
 
   "ornament6.title": "Се Каламфур\n(Три Перчика)",
-  "ornament6.description": "TODO ornament6.description ru",
+  "ornament6.context": "TODO ornament6.context ru",
 
   "ornament7.title": "Калкон Нухса Халы Гилам",
-  "ornament7.description": "TODO ornament7.description ru",
+  "ornament7.context": "TODO ornament7.context ru",
 
   "ornament8.title": "Кузача\n(Кувшинчик)",
-  "ornament8.description": "TODO ornament8.description ru",
+  "ornament8.context": "TODO ornament8.context ru",
 
   "ornament9.title": "Вихревая Розетка",
-  "ornament9.description": "TODO ornament9.description ru",
+  "ornament9.context": "TODO ornament9.context ru",
 
   "ornament10.title": "Кучкоршохи Нусха\n(Рога Барана)",
-  "ornament10.description": "TODO ornament10.description ru",
+  "ornament10.context": "TODO ornament10.context ru",
 
   "ornament11.title": "Рафида",
-  "ornament11.description": "TODO ornament11.description ru",
+  "ornament11.context": "TODO ornament11.context ru",
 
   "ornament12.title": "Калкон Ой Нусха\n(Щит И Луна)",
-  "ornament12.description": "TODO ornament12.description ru"
+  "ornament12.context": "TODO ornament12.context ru"
 
 }

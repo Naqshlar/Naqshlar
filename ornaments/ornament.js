@@ -7,7 +7,7 @@ async function loadOrnamentPage() {
         lang = await detectLanguageByIP();
     }
 
-    const trRes = await fetch(`i18n/${lang}.json`);  // Change to `../i18n/${lang}.json` if fetch fails due to path.
+    const trRes = await fetch(`i18n/${lang}.json`);
     const translations = await trRes.json();
 
     const res = await fetch("ornaments.json");
@@ -23,10 +23,26 @@ async function loadOrnamentPage() {
     // Apply translations
     document.getElementById("ornament-title").innerText =
         translations[item.key + ".title"] || "Untitled";
-    document.getElementById("ornament-description").innerText =
-        translations[item.key + ".description"] || "";
+    
+    const contextText = translations[item.key + ".context"] || "";
+    const contentParagraphs = contextText.split('\n')
+                                                .filter(p => p.trim() !== '')
+                                                .map(p => `<p>${p}</p>`)
+                                                .join('');
+    document.getElementById("ornament-context").innerHTML = contentParagraphs;
 
-    document.getElementById("download-btn").href = `files/${item.file}`;
+    const descriptionText = translations[item.key + ".description"] || "";
+    const descriptionParagraphs = descriptionText.split('\n')
+                                                        .filter(p => p.trim() !== '')
+                                                        .map(p => `<p>${p}</p>`)
+                                                        .join('');
+    document.getElementById("ornament-description").innerHTML = descriptionParagraphs;
+
+    document.getElementById("download-btn").href = `files/${item.filename}.stl`;
+    
+    document.getElementById("ornament-image").src = `images/${item.filename}.png`;
+    document.getElementById("ornament-image").alt = translations[item.key + ".alt"] || "";
+    document.getElementById("ornament-caption").innerText = translations[item.key + ".caption"] || "";
 
     // Previous / Next navigation
     const prevLink = document.getElementById("prev-link");

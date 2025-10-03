@@ -10,10 +10,37 @@ body {
     color: #e3e3e3;
 }
 
+.image-description {
+    font-size: 18px;
+    white-space: pre-line;
+}
+
+div p {
+    margin: 0 0 1em 0;
+    line-height: 1.8;
+    text-align: justify;
+    hyphens: auto;           /* Automatic word hyphenation */
+    -webkit-hyphens: auto;   /* Support for Webkit browsers (Chrome, Safari) */
+    -ms-hyphens: auto;       /* Support for IE */
+    word-break: break-word;  /* Additionally break long words if needed */
+}
+
 /* Header */
 h1 {
     text-align: center;
     margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+h4 {
+    margin-top: -20px;
+    text-transform: uppercase;
+    text-align: right;
 }
 
 /* File list */
@@ -243,7 +270,6 @@ main {
 
 /* Styles for paragraphs inside the introduction */
 [data-i18n="introduction"] p {
-    text-indent: 2em;        /* Indent at the beginning of a paragraph */
     margin: 0 0 1em 0;       /* Bottom margin to separate paragraphs */
     line-height: 1.8;        /* Line height for readability */
     text-align: justify;     /* Justify text */
@@ -256,7 +282,6 @@ main {
 /* Mobile adaptation */
 @media (max-width: 768px) {
     [data-i18n="introduction"] p {
-        text-indent: 1em;       /* Smaller indent at the beginning */
         margin-bottom: 0.8em;   /* Smaller space between paragraphs */
         hyphens: auto;          /* Ensure hyphenation works on mobile */
         -webkit-hyphens: auto;
@@ -266,4 +291,12 @@ main {
 
 body.preload {
     visibility: hidden;
+}
+
+.ornament-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin: 1cm auto
 }

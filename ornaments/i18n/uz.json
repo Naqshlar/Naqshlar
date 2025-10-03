@@ -2,7 +2,7 @@
   "title": "Naqshlar",
   "download": "TODO download uz",
   "downloadAll": "Hammasini yuklab olish",
-  "orn1": "1. Majnun-Bеd",
+  "orn1": "1. Majnun-Bed",
   "orn2": "2. Lola",
   "orn3": "3. Tumоrcha",
   "orn4": "4. Rоmb",
@@ -18,41 +18,45 @@
   "prev": "❮ TODO uz",
   "next": "TODO uz ❯",
   "ornamentList": "TODO ornamentList",
+  "descriptionLabel": "Tiflo-izoh",
   
   "ornament1.title": "Majnun-Bed",
+  "ornament1.context": "TODO ornament1.context uz",
+  "ornament1.alt": "TODO ornament1.alt uz",
+  "ornament1.caption": "TODO ornament1.caption uz",
   "ornament1.description": "TODO ornament1.description uz",
 
   "ornament2.title": "Lola",
-  "ornament2.description": "TODO ornament2.description uz",
+  "ornament2.context": "TODO ornament2.context uz",
 
   "ornament3.title": "Tumorcha",
-  "ornament3.description": "TODO ornament3.description uz",
+  "ornament3.context": "TODO ornament3.context uz",
 
   "ornament4.title": "Romb",
-  "ornament4.description": "TODO ornament4.description uz",
+  "ornament4.context": "TODO ornament4.context uz",
 
   "ornament5.title": "Kalampir Nusxa",
-  "ornament5.description": "TODO ornament5.description uz",
+  "ornament5.context": "TODO ornament5.context uz",
 
   "ornament6.title": "Se Qalamfur",
-  "ornament6.description": "TODO ornament6.description uz",
+  "ornament6.context": "TODO ornament6.context uz",
 
   "ornament7.title": "Galqon Nusxa Naqshli Gilam",
-  "ornament7.description": "TODO ornament7.description uz",
+  "ornament7.context": "TODO ornament7.context uz",
 
   "ornament8.title": "Ko‘zacha",
-  "ornament8.description": "TODO ornament8.description uz",
+  "ornament8.context": "TODO ornament8.context uz",
 
   "ornament9.title": "Uyurma To‘pbarggul",
-  "ornament9.description": "TODO ornament9.description uz",
+  "ornament9.context": "TODO ornament9.context uz",
 
   "ornament10.title": "Qo‘chqor Shoxi Nusxa",
-  "ornament10.description": "TODO ornament10.description uz",
+  "ornament10.context": "TODO ornament10.context uz",
 
   "ornament11.title": "Rafida",
-  "ornament11.description": "TODO ornament11.description uz",
+  "ornament11.context": "TODO ornament11.context uz",
 
   "ornament12.title": "Qalqon Oy Nusxa",
-  "ornament12.description": "TODO ornament12.description uz"
+  "ornament12.context": "TODO ornament12.context uz"
 
 }
