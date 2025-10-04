@@ -75,7 +75,6 @@ function setLanguage(lang, translations) {
         currentLang.textContent = langMap[lang].text;
     }
 
-    // Update the native select dropdown
     const langSelect = document.getElementById('lang-select');
     if (langSelect) {
         langSelect.value = lang;
@@ -93,9 +92,12 @@ function setLanguage(lang, translations) {
     if (langSwitcher) {
         langSwitcher.classList.remove('active');
     }
+
+    document.documentElement.setAttribute('lang', lang);
     
     document.body.classList.remove("preload");
     document.getElementById("content").removeAttribute("aria-busy");
+
 }
 
 // Initialize when the DOM is ready
