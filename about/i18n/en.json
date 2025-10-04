@@ -12,7 +12,7 @@
   "sourceList": "List of Sources Used:",
   "sourceItem1": "‘Folk Art of Uzbekistan’. Gafur Gulam Literature and Art Publishing House, Tashkent, 1978",
   "sourceItem2": "Digital catalog of digitized ornaments of applied arts and folk crafts of Uzbekistan. Ornaments, TBC Bank Uzbekistan, 2022",
-  "sourceItem3": "Illustrations used on the website are from the Digital Catalog of Digitized Ornaments of Applied Arts and Folk Crafts of Uzbekistan (Ornaments, TBC Bank Uzbekistan, 2022).",
+  "sourceItem3": "Illustrations used on the website are from the digital Catalog of Digitized Ornaments of Applied Arts and Folk Crafts of Uzbekistan (Ornaments, TBC Bank Uzbekistan, 2022).",
   "authors": "Project Team:",
   "author1": "Project Leader: Maria Musakova",
   "author2": "Curator: Maria Soshina",
@@ -24,5 +24,7 @@
   "author8": "Art Design: Alexandra Volodina",
   "author9": "Text Editing and Proofreading: Lidiya Nasibulina",
   "author10": "Website Development: <a class=\"small-link\" href=\"https://timofeev.cv\">Vadim Timofeev</a>",
+  "contacts": "Contacts",
+  "olgaKerimova": "Olga Kerimova: <a class=\"small-link\" href=\"mailto:origa.kerimova@gmail.com\">origa.kerimova@gmail.com</a>",
   "home": "Back to Home"
 }

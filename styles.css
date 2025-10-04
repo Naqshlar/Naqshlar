@@ -178,46 +178,6 @@ nav ul li.full-width {
     grid-column: 1 / -1;
 }
 
-/* Main container for right alignment */
-.lang-switcher-container {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-/* Hidden native select */
-#lang-select {
-    display: none;
-}
-
-/* Custom selector (trigger) */
-.lang-switcher {
-    position: relative;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 5px 10px;
-    /*border: 1px solid #ccc;*/
-    /*background-color: #fff;*/
-    background-color: #272727;
-    border: 1px solid #202020;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-/* Add down arrow to indicate dropdown */
-.lang-switcher::after {
-    content: '▼';
-    margin-left: 5px;
-    font-size: 12px;
-    color: #4a93ac;
-    /*color: #0099cc;*/
-}
-
-/* Change arrow to up when active (optional, for better UX) */
-.lang-switcher.active::after {
-    content: '▲';
-}
 
 /* Flags (images) */
 .flag {
@@ -240,40 +200,6 @@ nav ul li.full-width {
 
 .flag.en {
     background-image: url('flags/united-kingdom.png');
-}
-
-/* Language list (dropdown) */
-.lang-options {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    /*background-color: #fff;*/
-    /*border: 1px solid #ccc;*/
-    background-color: #272727;
-    border: 1px solid #202020;
-    border-radius: 4px;
-    min-width: 150px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-/* List elements */
-.lang-option {
-    padding: 5px 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.lang-option:hover {
-    /*background-color: #f0f0f0;*/
-    background-color: #3c3c3c;
-}
-
-/* Show dropdown on click */
-.lang-switcher.active .lang-options {
-    display: block;
 }
 
 /* Style for elements with multi-line text */
@@ -355,4 +281,77 @@ body.preload {
     position: relative;
     margin-bottom: 0px;
     font-size: 14px;
+    text-align: justify;
+}
+
+.centered {
+    margin: 0;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered nav {
+    width: 350px;
+}
+
+nav ul ul.language {
+    grid-column: 1 / -1;
+}
+
+nav ul.language {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+nav ul li.language a {
+    display: block;
+    padding: 25px;
+    text-align: center;
+    background-color: #e3e3e3;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase;
+}
+
+nav ul li.language a:hover,
+nav ul li.language a:focus {
+    background-color: #5c5c5c;
+    color: #e3e3e3;
+    transform: translateY(-2px);
+}
+
+
+.right-button {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #474747;
+    color: #f1f1f1;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.right-button:hover,
+.right-button:focus {
+    background-color: #232323;
+    transform: translateY(-2px);
+    outline-offset: 2px;
 }

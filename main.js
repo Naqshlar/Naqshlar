@@ -1,4 +1,3 @@
-// Function to load translations
 async function loadTranslations(lang) {
     try {
         const response = await fetch(`i18n/${lang}.json`);
@@ -12,38 +11,35 @@ async function loadTranslations(lang) {
     }
 }
 
-// Function to detect language by IP (example using a public API)
-async function detectLanguageByIP() {
-    try {
-        const response = await fetch('https://ipinfo.io/json');
-        const data = await response.json();
-        const country = data.country; // Example: "RU", "UZ", "GB"
+async function setFuckingLanguage(lang) {
+    const translations = await loadTranslations(lang);
+    applyLanguage(lang, translations);
+}
 
-        const countryToLang = {
-            "UZ": "uz",
-            "RU": "ru",
-            "KZ": "ru",
-            "GB": "en",
-            "US": "en"
-        };
+function applyLanguage(lang, translations) {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[key]) element.innerHTML = translations[key];
+    });
 
-        return countryToLang[country] || "en"; // Default fallback: English
-    } catch (error) {
-        console.error('Error detecting language by IP:', error);
-        return "en";
+    document.documentElement.setAttribute('lang', lang);
+    localStorage.setItem('selectedLanguage', lang);
+    document.body.classList.remove("preload");
+    document.getElementById("content")?.removeAttribute("aria-busy");
+}
+
+function showChoosingLanguagePage() {
+    const currentPage = window.location.pathname.split('/').pop();
+    if (currentPage !== 'choose-language.html') {
+        window.location.href = '/choose-language.html';
     }
 }
 
-// Function to apply translations to the page
 function setLanguage(lang, translations) {
-    // localStorage.setItem("lang", lang);
-    // loadTranslations(lang); // твоя функция подстановки переводов
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
-        // debugger;
         if (translations[key]) {
             if (key === 'introduction') {
-                // Special case: split into paragraphs
                 const text = translations[key];
                 const paragraphs = text
                     .split('\n')
@@ -57,12 +53,6 @@ function setLanguage(lang, translations) {
         }
     });
 
-    const catalogueLink = document.querySelector('a[data-i18n="downloadCatalogue"]');
-    if (catalogueLink) {
-        catalogueLink.href = `catalogues/patterns_catalog_${lang}.pdf`;
-    }
-
-    // Update the current flag and language text
     const currentFlag = document.getElementById('current-flag');
     const currentLang = document.getElementById('current-lang');
     const langMap = {
@@ -75,19 +65,12 @@ function setLanguage(lang, translations) {
         currentLang.textContent = langMap[lang].text;
     }
 
-    const langSelect = document.getElementById('lang-select');
-    if (langSelect) {
-        langSelect.value = lang;
-    }
-
-    // Save choice
     try {
         localStorage.setItem('selectedLanguage', lang);
     } catch (e) {
         console.warn('Could not save language to localStorage:', e);
     }
 
-    // Hide dropdown after selection
     const langSwitcher = document.getElementById('lang-switcher');
     if (langSwitcher) {
         langSwitcher.classList.remove('active');
@@ -100,30 +83,13 @@ function setLanguage(lang, translations) {
 
 }
 
-// Initialize when the DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
-    // Load header content if placeholder exists
-    const placeholder = document.getElementById('lang-switcher-placeholder');
-    if (placeholder) {
-        try {
-            const response = await fetch('header.html');
-            if (response.ok) {
-                const headerContent = await response.text();
-                placeholder.innerHTML = headerContent;
-            } else {
-                console.error('Failed to load header.html');
-            }
-        } catch (e) {
-            console.error('Error loading header.html:', e);
-        }
-    }
     
     const isDynamic = document.querySelector('#pattern-title') !== null;
     if (isDynamic) {
         return;
     }
-
-    // Detect or load saved language
+    
     let savedLang = null;
     try {
         savedLang = localStorage.getItem('selectedLanguage');
@@ -131,58 +97,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.warn('Could not read language from localStorage:', e);
     }
     if (!savedLang) {
-        savedLang = await detectLanguageByIP();
+        showChoosingLanguagePage();
+    } else {
+        const translations = await loadTranslations(savedLang);
+        setLanguage(savedLang, translations);
     }
+});
 
-    // Load translations for the selected language
-    const translations = await loadTranslations(savedLang);
-
-    // Apply translations to the page
-    setLanguage(savedLang, translations);
-
-    // Generate dropdown with options
-    const langSwitcher = document.getElementById('lang-switcher');
-    if (langSwitcher) {
-        const langOptions = `
-            <div class="lang-options">
-                <div class="lang-option" data-lang="uz"><span class="flag uz"></span> O‘zbekcha</div>
-                <div class="lang-option" data-lang="ru"><span class="flag ru"></span> Русский</div>
-                <div class="lang-option" data-lang="en"><span class="flag en"></span> English</div>
-            </div>
-        `;
-        langSwitcher.insertAdjacentHTML('beforeend', langOptions);
-
-        // Handler for dropdown toggle
-        langSwitcher.addEventListener('click', (event) => {
-            langSwitcher.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.language a').forEach(link => {
+        link.addEventListener('click', async (event) => {
+            event.preventDefault();
+            const lang = link.dataset.lang; 
+            await setFuckingLanguage(lang);
+            window.location.href = '/';
         });
-
-        // Handler for selecting a language
-        langSwitcher.addEventListener('click', async (event) => {
-            const option = event.target.closest('.lang-option');
-            if (option) {
-                const selectedLang = option.getAttribute('data-lang');
-                const newTranslations = await loadTranslations(selectedLang);
-                setLanguage(selectedLang, newTranslations);
-            }
-        });
-    }
-
-    // Close the dropdown on outside click
-    document.addEventListener('click', (event) => {
-        const langSwitcher = document.getElementById('lang-switcher');
-        if (langSwitcher && !langSwitcher.contains(event.target)) {
-            langSwitcher.classList.remove('active');
-        }
     });
-
-    // Sync with native select (for accessibility)
-    const langSelect = document.getElementById('lang-select');
-    if (langSelect) {
-        langSelect.addEventListener('change', async (event) => {
-            const selectedLang = event.target.value;
-            const newTranslations = await loadTranslations(selectedLang);
-            setLanguage(selectedLang, newTranslations);
-        });
-    }
 });
