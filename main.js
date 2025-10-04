@@ -59,7 +59,7 @@ function setLanguage(lang, translations) {
 
     const catalogueLink = document.querySelector('a[data-i18n="downloadCatalogue"]');
     if (catalogueLink) {
-        catalogueLink.href = `catalogues/ornaments_catalog_${lang}.pdf`;
+        catalogueLink.href = `catalogues/patterns_catalog_${lang}.pdf`;
     }
 
     // Update the current flag and language text
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
     
-    const isDynamic = document.querySelector('#ornament-title') !== null;
+    const isDynamic = document.querySelector('#pattern-title') !== null;
     if (isDynamic) {
         return;
     }
