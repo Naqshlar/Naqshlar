@@ -52,7 +52,7 @@ function setLanguage(lang, translations) {
                     .join('');
                 element.innerHTML = paragraphs;
             } else {
-                element.textContent = translations[key];
+                element.innerHTML = translations[key];
             }
         }
     });

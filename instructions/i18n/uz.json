@@ -1,5 +1,13 @@
 {
-  "title": "TODO title uz",
-  "text": "TODO text uz",
-  "home": "TODO home uz"
+  "title": "3D printerda chop etish bo'yicha ko'rsatmalar",
+  "step1": "Modelni yuklash",
+  "step1-text": "Kerakli faylni .stl formatida yuklab oling va uni 3D chop etishga tayyorlash dasturida oching, masalan: Cura, PrusaSlicer, Creality Print yoki Bambu Studio.",
+  "step2": "Tavsiya etilgan chop etish sozlamalari",
+  "step2-item1": "<b>Qatlam balandligi: 0.2&nbsp;mm</b> — bu yaxshi sifat va o'rtacha chop etish vaqti uchun yetarli.",
+  "step2-item2": "<b>Ironing (silliqlash):</b> Ironing opsiyasini yoqing va ironing flow parametrini 22&nbsp;% ga sozlang. Bu yuqori yuzalarni silliqroq qilishga yordam beradi.",
+  "step2-item3": "<b>To'ldirish (infill): 10–20&nbsp;%</b> — odatda bu mustahkamlik uchun yetarli.",
+  "step2-item4": "<b>Chegara (brim yoki skirt):</b> agar kerak bo'lsa, modelning chop etish stoliga yopishishini yaxshilash uchun brim qo'shing.",
+  "step3": "Material",
+  "step3-text": "Chop etish uchun PLA yoki PETG mos keladi — ular foydalanishda oson va yaxshi sirt sifatini beradi.",
+  "home": "Bosh sahifaga"
 }

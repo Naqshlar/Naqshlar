@@ -1,5 +1,13 @@
 {
-  "title": "Instructions for 3D printing",
-  "text": "TODO text en",
+  "title": "Instructions for 3D Printing",
+  "step1": "Load the Model",
+  "step1-text": "Download the required file in .stl format and open it in a 3D printing preparation software, such as Cura, PrusaSlicer, Creality Print, or Bambu Studio.",
+  "step2": "Recommended Print Settings",
+  "step2-item1": "<b>Layer Height: 0.2&nbsp;mm</b> — this is sufficient for good quality and reasonable print time.",
+  "step2-item2": "<b>Ironing:</b> enable the Ironing option and set the ironing flow to 22&nbsp;%. This will help make the top surfaces smoother.",
+  "step2-item3": "<b>Infill: 10–20&nbsp;%</b> — this is usually sufficient for strength.",
+  "step2-item4": "<b>Brim or Skirt:</b> if necessary, add a brim to improve model adhesion to the print bed.",
+  "step3": "Material",
+  "step3-text": "PLA or PETG are suitable for printing — they are easy to use and provide good surface quality.",
   "home": "Home page"
 }
