@@ -16,37 +16,37 @@
   },
   {
     "id": 4,
-    "filename": "4_romb",
+    "filename": "4_rhombus",
     "key": "ornament4"
   },
   {
     "id": 5,
-    "filename": "5_kalampir_nusxa",
+    "filename": "5_kalampir_nuskha",
     "key": "ornament5"
   },
   {
     "id": 6,
-    "filename": "6_se_qalamfur",
+    "filename": "6_se_kalamfur",
     "key": "ornament6"
   },
   {
     "id": 7,
-    "filename": "7_galqon_nusxa_naqshli_gilam",
+    "filename": "7_kalkon_nuskha_haly_gilam",
     "key": "ornament7"
   },
   {
     "id": 8,
-    "filename": "8_ko‘zacha",
+    "filename": "8_kuzacha",
     "key": "ornament8"
   },
   {
     "id": 9,
-    "filename": "9_uyurma_to‘pbarggul",
+    "filename": "9_whirl_rosette",
     "key": "ornament9"
   },
   {
     "id": 10,
-    "filename": "10_qo‘chqor_shoxi_nusxa",
+    "filename": "10_kuchkorshohi_nuskha",
     "key": "ornament10"
   },
   {
@@ -56,7 +56,7 @@
   },
   {
     "id": 12,
-    "filename": "12_qalqon_oy_nusxa",
+    "filename": "12_kalkon_oy_nuskha",
     "key": "ornament12"
   }
 ]
