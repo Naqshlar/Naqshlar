@@ -11,11 +11,6 @@ async function loadTranslations(lang) {
     }
 }
 
-async function setFuckingLanguage(lang) {
-    const translations = await loadTranslations(lang);
-    applyLanguage(lang, translations);
-}
-
 function applyLanguage(lang, translations) {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
@@ -76,20 +71,26 @@ function setLanguage(lang, translations) {
         langSwitcher.classList.remove('active');
     }
 
+    // For better WCAG compatibility in Uzbek 
+    document.querySelectorAll('div, h1, a').forEach(div => {
+        if (div.getAttribute('aria-label')) return;
+        div.setAttribute('aria-label', div.textContent.toLowerCase());
+    });
+
     document.documentElement.setAttribute('lang', lang);
-    
+
     document.body.classList.remove("preload");
-    document.getElementById("content").removeAttribute("aria-busy");
+    document.getElementById("content")?.removeAttribute("aria-busy");
 
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    
+
     const isDynamic = document.querySelector('#pattern-title') !== null;
     if (isDynamic) {
         return;
     }
-    
+
     let savedLang = null;
     try {
         savedLang = localStorage.getItem('selectedLanguage');
@@ -108,8 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.language a').forEach(link => {
         link.addEventListener('click', async (event) => {
             event.preventDefault();
-            const lang = link.dataset.lang; 
-            await setFuckingLanguage(lang);
+            const lang = link.dataset.lang;
+            const translations = await loadTranslations(lang);
+            await applyLanguage(lang, translations);
             window.location.href = '/';
         });
     });

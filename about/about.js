@@ -18,7 +18,8 @@ async function loadAboutPage() {
     document.getElementById("focus-gravity-hub-link").ariaLabel = translations["focusGravityHubLink"] || "";
  
     setLanguage(lang, translations);
-
+    
+    document.documentElement.setAttribute('lang', lang);
     document.body.classList.remove("preload");
     document.getElementById("content")?.removeAttribute("aria-busy");
 }
