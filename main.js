@@ -72,7 +72,7 @@ function setLanguage(lang, translations) {
     }
 
     // For better WCAG compatibility in Uzbek 
-    document.querySelectorAll('div, h1, a').forEach(div => {
+    document.querySelectorAll('div, h1, h2, h3, h4, a').forEach(div => {
         if (div.getAttribute('aria-label')) return;
         div.setAttribute('aria-label', div.textContent.toLowerCase());
     });
