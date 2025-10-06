@@ -4,7 +4,7 @@ async function loadPatternPage() {
 
     let lang = localStorage.getItem("selectedLanguage");
     if (!lang) {
-        lang = await detectLanguageByIP();
+        showChoosingLanguagePage();
     }
 
     const trRes = await fetch(`i18n/${lang}.json`);

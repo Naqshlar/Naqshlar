@@ -26,6 +26,7 @@ function applyLanguage(lang, translations) {
 function showChoosingLanguagePage() {
     const currentPage = window.location.pathname.split('/').pop();
     if (currentPage !== 'choose-language.html') {
+        localStorage.setItem('languageRedirectRef', document.URL);
         window.location.href = '/choose-language.html';
     }
 }
@@ -76,8 +77,10 @@ function setLanguage(lang, translations) {
         if (div.getAttribute('aria-label')) return;
         div.setAttribute('aria-label', div.textContent.toLowerCase());
     });
-
-    document.documentElement.setAttribute('lang', lang);
+    
+    if (document.title !== 'Choose a language') {
+        document.documentElement.setAttribute('lang', lang);
+    }
 
     document.body.classList.remove("preload");
     document.getElementById("content")?.removeAttribute("aria-busy");
@@ -112,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const lang = link.dataset.lang;
             const translations = await loadTranslations(lang);
             await applyLanguage(lang, translations);
-            window.location.href = '/';
+            window.location.href = localStorage.getItem('languageRedirectRef');
         });
     });
 });
