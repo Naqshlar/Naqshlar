@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const lang = link.dataset.lang;
             const translations = await loadTranslations(lang);
             await applyLanguage(lang, translations);
-            window.location.href = localStorage.getItem('languageRedirectRef');
+            window.location.href = localStorage.getItem('languageRedirectRef') || "/";
         });
     });
 });
