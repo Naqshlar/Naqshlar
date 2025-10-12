@@ -178,30 +178,6 @@ nav ul li.full-width {
     grid-column: 1 / -1;
 }
 
-
-/* Flags (images) */
-.flag {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    background-size: cover;
-    background-position: center;
-    vertical-align: middle;
-}
-
-.flag.uz {
-    background-image: url('flags/uzbekistan.png');
-}
-
-.flag.ru {
-    background-image: url('flags/russia.png');
-}
-
-.flag.en {
-    background-image: url('flags/united-kingdom.png');
-}
-
 /* Style for elements with multi-line text */
 [data-i18n="introduction"] {
     font-size: 18px;

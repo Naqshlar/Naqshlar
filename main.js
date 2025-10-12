@@ -49,18 +49,6 @@ function setLanguage(lang, translations) {
         }
     });
 
-    const currentFlag = document.getElementById('current-flag');
-    const currentLang = document.getElementById('current-lang');
-    const langMap = {
-        'uz': {flagClass: 'uz', text: ''},
-        'ru': {flagClass: 'ru', text: ''},
-        'en': {flagClass: 'en', text: ''}
-    };
-    if (currentFlag && currentLang && langMap[lang]) {
-        currentFlag.className = `flag ${langMap[lang].flagClass}`;
-        currentLang.textContent = langMap[lang].text;
-    }
-
     try {
         localStorage.setItem('selectedLanguage', lang);
     } catch (e) {
