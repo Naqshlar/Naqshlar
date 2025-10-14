@@ -1,5 +1,5 @@
 (function () {
-    if (window.location.hostname === 'naqshlar.github.io') {
+    if (window.location.hostname === CONFIG.ANALYTICS_DOMAIN) {
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
@@ -7,11 +7,11 @@
         }
 
         gtag('js', new Date());
-        gtag('config', 'G-4BYQ7RYCKR');
+        gtag('config', CONFIG.ANALYTICS_ID);
 
         const script = document.createElement('script');
         script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-4BYQ7RYCKR';
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + CONFIG.ANALYTICS_ID;
         document.head.appendChild(script);
     }
 })();

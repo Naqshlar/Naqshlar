@@ -1,38 +1,18 @@
 async function loadAboutPage() {
-    let lang = getStoredLanguage();
-    if (!lang) {
-        showChoosingLanguagePage();
-        return;
-    }
+    const pageLoader = new PageLoader();
+    const initialized = await pageLoader.initialize();
 
-    const translations = await loadTranslations(lang);
+    if (!initialized) return;
 
-    const logoAlts = {
-        "focus-school-logo": "focusSchoolAlt",
-        "focus-gravity-hub-logo": "focusGravityHubAlt",
-        "swiss-logo": "swissAlt"
+    const elementsConfig = {
+        "focus-school-logo": { alt: "focusSchoolAlt" },
+        "focus-gravity-hub-logo": { alt: "focusGravityHubAlt" },
+        "swiss-logo": { alt: "swissAlt" },
+        "focus-school-link": { ariaLabel: "focusSchoolLink" },
+        "focus-gravity-hub-link": { ariaLabel: "focusGravityHubLink" }
     };
 
-    Object.entries(logoAlts).forEach(([id, key]) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.alt = translations[key] || "";
-        }
-    });
-
-    const linkAriaLabels = {
-        "focus-school-link": "focusSchoolLink",
-        "focus-gravity-hub-link": "focusGravityHubLink"
-    };
-
-    Object.entries(linkAriaLabels).forEach(([id, key]) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.ariaLabel = translations[key] || "";
-        }
-    });
-
-    setLanguage(lang, translations);
+    pageLoader.setElementsAttributes(elementsConfig);
 }
 
 document.addEventListener("DOMContentLoaded", loadAboutPage);

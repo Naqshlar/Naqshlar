@@ -1,6 +1,6 @@
 function getStoredLanguage() {
     try {
-        return localStorage.getItem('selectedLanguage');
+        return localStorage.getItem(CONFIG.STORAGE_KEYS.LANGUAGE);
     } catch (e) {
         console.warn('Could not read language from localStorage:', e);
         return null;
@@ -43,7 +43,7 @@ function setLanguage(lang, translations) {
     applyTranslations(translations);
 
     try {
-        localStorage.setItem('selectedLanguage', lang);
+        localStorage.setItem(CONFIG.STORAGE_KEYS.LANGUAGE, lang);
     } catch (e) {
         console.warn('Could not save language to localStorage:', e);
     }
@@ -92,6 +92,31 @@ function splitIntoParagraphs(text) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    const languageLinks = document.querySelectorAll('.language a');
+    if (languageLinks.length > 0) {
+        languageLinks.forEach(link => {
+            link.addEventListener('click', async (event) => {
+                event.preventDefault();
+                const lang = link.dataset.lang;
+                const translations = await loadTranslations(lang);
+
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const key = element.getAttribute('data-i18n');
+                    if (translations[key]) element.innerHTML = translations[key];
+                });
+
+                document.documentElement.setAttribute('lang', lang);
+                localStorage.setItem(CONFIG.STORAGE_KEYS.LANGUAGE, lang);
+
+                const redirectUrl = localStorage.getItem(CONFIG.STORAGE_KEYS.REDIRECT_REF) || CONFIG.DEFAULT_REDIRECT;
+                localStorage.removeItem(CONFIG.STORAGE_KEYS.REDIRECT_REF);
+
+                window.location.href = redirectUrl;
+            });
+        });
+        return;
+    }
+
     const isDynamicPage = document.querySelector('#pattern-title') !== null;
     if (isDynamicPage) {
         return;
@@ -103,24 +128,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
         await initializePage(savedLang);
     }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.language a').forEach(link => {
-        link.addEventListener('click', async (event) => {
-            event.preventDefault();
-            const lang = link.dataset.lang;
-            const translations = await loadTranslations(lang);
-
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (translations[key]) element.innerHTML = translations[key];
-            });
-
-            document.documentElement.setAttribute('lang', lang);
-            localStorage.setItem('selectedLanguage', lang);
-
-            window.location.href = localStorage.getItem('languageRedirectRef') || "/";
-        });
-    });
 });
