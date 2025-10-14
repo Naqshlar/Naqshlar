@@ -1,27 +1,38 @@
 async function loadAboutPage() {
-    const params = new URLSearchParams(window.location.search);
-    const id = parseInt(params.get("id"), 10);
-
-    let lang = localStorage.getItem("selectedLanguage");
+    let lang = getStoredLanguage();
     if (!lang) {
-        lang = await detectLanguageByIP();
+        showChoosingLanguagePage();
+        return;
     }
 
-    const translateResource = await fetch(`i18n/${lang}.json`);
-    const translations = await translateResource.json();
-    
-    document.getElementById("focus-school-logo").alt = translations["focusSchoolAlt"] || "";
-    document.getElementById("focus-gravity-hub-logo").alt = translations["focusGravityHubAlt"] || "";
-    document.getElementById("swiss-logo").alt = translations["swissAlt"] || "";
-    
-    document.getElementById("focus-school-link").ariaLabel = translations["focusSchoolLink"] || "";
-    document.getElementById("focus-gravity-hub-link").ariaLabel = translations["focusGravityHubLink"] || "";
- 
+    const translations = await loadTranslations(lang);
+
+    const logoAlts = {
+        "focus-school-logo": "focusSchoolAlt",
+        "focus-gravity-hub-logo": "focusGravityHubAlt",
+        "swiss-logo": "swissAlt"
+    };
+
+    Object.entries(logoAlts).forEach(([id, key]) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.alt = translations[key] || "";
+        }
+    });
+
+    const linkAriaLabels = {
+        "focus-school-link": "focusSchoolLink",
+        "focus-gravity-hub-link": "focusGravityHubLink"
+    };
+
+    Object.entries(linkAriaLabels).forEach(([id, key]) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.ariaLabel = translations[key] || "";
+        }
+    });
+
     setLanguage(lang, translations);
-    
-    document.documentElement.setAttribute('lang', lang);
-    document.body.classList.remove("preload");
-    document.getElementById("content")?.removeAttribute("aria-busy");
 }
 
 document.addEventListener("DOMContentLoaded", loadAboutPage);
