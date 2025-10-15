@@ -8,8 +8,6 @@ async function loadAboutPage() {
         "focus-school-logo": { alt: "focusSchoolAlt" },
         "focus-gravity-hub-logo": { alt: "focusGravityHubAlt" },
         "swiss-logo": { alt: "swissAlt" },
-        "focus-school-link": { ariaLabel: "focusSchoolLink" },
-        "focus-gravity-hub-link": { ariaLabel: "focusGravityHubLink" }
     };
 
     pageLoader.setElementsAttributes(elementsConfig);

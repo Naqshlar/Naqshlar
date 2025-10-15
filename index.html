@@ -12,21 +12,20 @@
     <script src="page-loader.js"></script>
 </head>
 
-<body class="preload" style="padding-top: 80px">
+<body class="preload">
 
-<div id="lang-switcher-placeholder"></div>
-
-<a class="right-button" href="choose-language.html" data-i18n="changeLanguage">Change language</a>
+<div class="right-button-container">
+    <a class="right-button" href="choose-language.html" data-i18n="changeLanguage">Change language</a>
+</div>
 
 <header>
     <h1 data-i18n="title">Patterns</h1>
 </header>
 
 <main id="content" aria-busy="true">
-    <div data-i18n="introduction">Introduction</div>
-    
-    <br>
-    
+    <p data-i18n="introduction">Introduction</p>
+
+
     <nav aria-label="See patterns">
         <ul>
             <li class="full-width"><a href="patterns" data-i18n="seePatterns">Patterns</a></li>
@@ -34,7 +33,7 @@
             <li><a href="about" data-i18n="about">About the project</a></li>
         </ul>
     </nav>
-    
+
 </main>
 
 <footer>

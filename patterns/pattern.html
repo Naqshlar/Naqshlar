@@ -20,37 +20,42 @@
 
 <main id="content" aria-busy="true">
 
-    <div class="text-block" id="pattern-context"></div>
+    <p class="text-block" id="pattern-context"></p>
 
-    <img id="pattern-image" class="pattern-image" src="" alt="">
-    <h4 id="pattern-caption">Pattern caption</h4>
+    <figure>
+        <img id="pattern-image" class="pattern-image" src="" alt="Pattern illustration" loading="lazy">
+        <figcaption id="pattern-caption">Pattern caption</figcaption>
+    </figure>
 
-    <h2 data-i18n="descriptionLabel">Image description</h2>
-    <div class="text-block" id="pattern-description"></div>
+    <section>
+        <h2 data-i18n="descriptionLabel">Image description</h2>
+        <p class="text-block" id="pattern-description"></p>
+    </section>
+    
+    <div class="buttons-container">
+        <nav aria-label="Download">
+            <ul>
+                <li class="full-width">
+                    <a id="download-btn" href="" download data-i18n="download">Download</a>
+                </li>
+            </ul>
+        </nav>
 
-    <nav aria-label="Naqshlar list">
-        <ul>
-            <li class="full-width">
-                <a id="download-btn" href="" download data-i18n="download">Download</a>
-            </li>
-        </ul>
-    </nav>
+        <nav aria-label="Pattern navigation">
+            <div class="nav-buttons" role="navigation" aria-label="Previous and next pattern">
+                <a href="#" id="prev-link" class="btn small-btn" data-i18n="prev">❮
+                    Previous</a>
+                <a href="#" id="next-link" class="btn small-btn" data-i18n="next">Next ❯</a>
+            </div>
+        </nav>
 
-    <nav aria-label="Pattern navigation">
-        <div class="nav-buttons" role="navigation" aria-label="Previous and next pattern">
-            <a href="#" id="prev-link" class="btn small-btn" data-i18n="prev">❮ Previous</a>
-            <a href="#" id="next-link" class="btn small-btn" data-i18n="next">Next ❯</a>
-        </div>
-    </nav>
-
-    <br>
-
-    <nav aria-label="Home">
-        <ul>
-            <li><a href="index.html" data-i18n="patternList">List of patterns</a></li>
-            <li><a href=".." data-i18n="home">Home page</a></li>
-        </ul>
-    </nav>
+        <nav aria-label="Home">
+            <ul>
+                <li><a href="index.html" data-i18n="patternList">List of patterns</a></li>
+                <li><a href=".." data-i18n="home">Home page</a></li>
+            </ul>
+        </nav>
+    </div>
 
 </main>
 

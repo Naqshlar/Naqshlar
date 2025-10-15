@@ -78,14 +78,17 @@ h4 {
     text-align: right;
 }
 
+.buttons-container {
+    margin: 4rem 0 0 0;
+}
+
 /* File list */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 -0.5rem 0 -0.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
 }
 
 /* Link-buttons */
@@ -103,6 +106,7 @@ nav ul li a {
     font-weight: bold;
     transition: background-color 0.3s, transform 0.2s;
     text-transform: uppercase;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 /* Hover and focus for accessibility */
@@ -127,7 +131,7 @@ nav ul li a.disabled {
     display: flex;
     justify-content: space-between;
     gap: 15px;
-    margin-top: 20px;
+    margin: 0.5rem 0 1rem 0;
 }
 
 .nav-buttons a {
@@ -176,6 +180,11 @@ footer {
 /* Special style for the first button */
 nav ul li.full-width {
     grid-column: 1 / -1;
+}
+
+nav ul li.full-width-single {
+    grid-column: 1 / -1;
+    margin: 1rem 0 1rem 0;
 }
 
 /* Style for elements with multi-line text */
@@ -250,14 +259,31 @@ body.preload {
 
 .custom-list-small {
     list-style: none;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .custom-list-small li {
     position: relative;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     font-size: 14px;
     text-align: justify;
+}
+
+.custom-list-small-bullet {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list-small-bullet li {
+    position: relative;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.custom-list-small-bullet li::before {
+    content: "• ";
+    margin-right: 0.5em;
 }
 
 .centered {
@@ -318,16 +344,39 @@ nav ul li.language a:focus {
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s, transform 0.2s;
+    margin-left: auto;
+}
 
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
+.right-button-container {
+    display: flex;
 }
 
 .right-button:hover,
 .right-button:focus {
-    background-color: #232323;
+    background-color: #2c2c2c;
     transform: translateY(-2px);
     outline-offset: 2px;
+}
+
+.subtitle {
+    font-size: 50px;
+    text-align: center;
+}
+
+.text-block-tight {
+    margin: -0.8rem 0 2rem 0
+}
+
+.section-heading {
+    margin-bottom: -15px;
+}
+
+figcaption {
+    margin-top: -1.25rem;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+figure {
+    margin: 4rem 1.5rem 4rem 1.5rem;
 }
