@@ -1,4 +1,40 @@
 /* ========================================
+   Base Button Styles
+   ======================================== */
+.btn,
+nav ul li a,
+.nav-buttons a {
+    display: block;
+    padding: var(--button-padding);
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: var(--button-border-radius);
+    font-weight: bold;
+    transition: background-color var(--transition-base), transform var(--transition-transform);
+    text-transform: uppercase;
+}
+
+.btn:hover,
+.btn:focus,
+nav ul li a:hover,
+nav ul li a:focus,
+.nav-buttons a:hover,
+.nav-buttons a:focus {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn.disabled,
+nav ul li a.disabled,
+.nav-buttons a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    background-color: var(--color-disabled);
+}
+
+/* ========================================
    Navigation - Main Grid
    ======================================== */
 nav ul {
@@ -10,30 +46,8 @@ nav ul {
 }
 
 nav ul li a {
-    display: block;
-    padding: var(--button-padding);
-    text-align: center;
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    text-decoration: none;
-    border-radius: var(--button-border-radius);
     font-size: var(--font-size-medium);
-    font-weight: bold;
-    transition: background-color var(--transition-base), transform var(--transition-transform);
-    text-transform: uppercase;
     margin: var(--spacing-xs);
-}
-
-nav ul li a:hover,
-nav ul li a:focus {
-    background-color: var(--color-primary-hover);
-    transform: translateY(-2px);
-}
-
-nav ul li a.disabled {
-    pointer-events: none;
-    opacity: 0.5;
-    background-color: var(--color-disabled);
 }
 
 nav ul li.full-width {
@@ -57,28 +71,7 @@ nav ul li.full-width-single {
 
 .nav-buttons a {
     flex: 1;
-    text-align: center;
-    padding: var(--button-padding);
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    text-decoration: none;
-    border-radius: var(--button-border-radius);
     font-size: var(--font-size-small);
-    font-weight: bold;
-    transition: background-color var(--transition-base), transform var(--transition-transform);
-    text-transform: uppercase;
-}
-
-.nav-buttons a:hover,
-.nav-buttons a:focus {
-    background-color: var(--color-primary-hover);
-    transform: translateY(-2px);
-}
-
-.nav-buttons a.disabled {
-    pointer-events: none;
-    opacity: 0.5;
-    background-color: var(--color-disabled);
 }
 
 /* ========================================
@@ -98,17 +91,11 @@ nav ul.language {
 }
 
 nav ul li.language a {
-    display: block;
     padding: 25px;
-    text-align: center;
     background-color: var(--color-language-button);
     color: var(--color-language-button-text);
-    text-decoration: none;
-    border-radius: var(--button-border-radius);
     font-size: var(--font-size-medium);
-    font-weight: bold;
     transition: background-color var(--transition-base), color var(--transition-base), transform var(--transition-transform);
-    text-transform: uppercase;
 }
 
 nav ul li.language a:hover,
