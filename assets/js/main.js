@@ -9,9 +9,9 @@ function getStoredLanguage() {
 
 function showChoosingLanguagePage() {
     const currentPage = window.location.pathname.split('/').pop();
-    if (currentPage !== 'choose-language.html') {
+    if (currentPage !== 'choose-language') {
         localStorage.setItem('languageRedirectRef', document.URL);
-        window.location.href = '/choose-language.html';
+        window.location.href = '/choose-language';
     }
 }
 
@@ -92,6 +92,16 @@ function splitIntoParagraphs(text) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    const footer = document.querySelector('footer');
+    if (footer) {
+        const startYear = 2023;
+        const currentYear = new Date().getFullYear();
+        const yearText = startYear === currentYear
+            ? startYear
+            : `${startYear}–${currentYear}`;
+        footer.textContent = `© ${yearText} Naqshlar Project`;
+    }
+    
     const languageLinks = document.querySelectorAll('.language a');
     if (languageLinks.length > 0) {
         languageLinks.forEach(link => {

@@ -48,10 +48,10 @@ function updatePatternContent(item, translations) {
     document.getElementById("pattern-context").innerHTML =
         splitIntoParagraphs(translations[item.key + ".context"] || "");
 
-    document.getElementById("download-btn").href = `files/${item.filename}.stl`;
+    document.getElementById("download-btn").href = `../assets/stls/${item.filename}.stl`;
 
     const patternImage = document.getElementById("pattern-image");
-    patternImage.src = `images/${item.filename}.png`;
+    patternImage.src = `../assets/images/patterns/${item.filename}.png`;
     patternImage.alt = translations[item.key + ".alt"] || "";
 
     document.getElementById("pattern-caption").innerText =
