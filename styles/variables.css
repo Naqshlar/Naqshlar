@@ -1,0 +1,43 @@
+:root {
+    /* Colors */
+    --color-bg: #232323;
+    --color-text: #e3e3e3;
+    --color-text-muted: #959595;
+    --color-primary: #276075;
+    --color-primary-hover: #277567;
+    --color-accent: #82bdb3;
+    --color-disabled: #444;
+    --color-button-secondary: #474747;
+    --color-button-secondary-hover: #2c2c2c;
+    --color-language-button: #e3e3e3;
+    --color-language-button-text: #000000;
+    --color-language-button-hover: #5c5c5c;
+
+    /* Typography */
+    --font-family-base: Arial, sans-serif;
+    --font-size-base: 18px;
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-subtitle: 50px;
+    --font-size-footer: 14px;
+    --line-height-base: 1.6;
+    --line-height-text: 1.8;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+
+    /* Layout */
+    --content-max-width: 800px;
+    --button-border-radius: 6px;
+    --button-padding: 15px;
+    --button-padding-small: 12px;
+    --button-padding-tiny: 10px;
+
+    /* Transitions */
+    --transition-base: 0.3s;
+    --transition-transform: 0.2s;
+}

@@ -1,0 +1,16 @@
+.pattern-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1cm auto;
+}
+
+figure {
+    margin: var(--spacing-xl) var(--spacing-md);
+}
+
+figcaption {
+    margin-top: -1.25rem;
+    text-transform: uppercase;
+    text-align: right;
+}

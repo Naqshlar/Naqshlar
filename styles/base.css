@@ -1,0 +1,35 @@
+body {
+    font-family: var(--font-family-base), serif;
+    margin: 0;
+    padding: 20px;
+    line-height: var(--line-height-base);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+body.preload {
+    visibility: hidden;
+}
+
+main {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.centered {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.centered nav {
+    width: 350px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-footer);
+}

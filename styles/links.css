@@ -1,0 +1,23 @@
+.link {
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    transition: color var(--transition-base);
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: var(--color-accent);
+}
+
+.small-link {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    transition: color var(--transition-base);
+}
+
+.small-link:hover {
+    text-decoration: underline;
+}
