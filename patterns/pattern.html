@@ -15,12 +15,12 @@
 <body class="preload">
 
 <header>
-    <h1 id="pattern-title">Pattern</h1>
+    <h1 id="pattern-title">Pattern Name</h1>
 </header>
 
 <main id="content" aria-busy="true">
 
-    <p class="text-block" id="pattern-context"></p>
+    <p id="pattern-context"></p>
 
     <figure>
         <img id="pattern-image" class="pattern-image" src="" alt="Pattern illustration" loading="lazy">
@@ -29,9 +29,9 @@
 
     <section>
         <h2 data-i18n="descriptionLabel">Image description</h2>
-        <p class="text-block" id="pattern-description"></p>
+        <p id="pattern-description"></p>
     </section>
-    
+
     <div class="buttons-container">
         <nav aria-label="Download">
             <ul>
@@ -41,12 +41,13 @@
             </ul>
         </nav>
 
-        <nav aria-label="Pattern navigation">
-            <div class="nav-buttons" role="navigation" aria-label="Previous and next pattern">
-                <a href="#" id="prev-link" class="btn small-btn" data-i18n="prev">❮
-                    Previous</a>
-                <a href="#" id="next-link" class="btn small-btn" data-i18n="next">Next ❯</a>
-            </div>
+        <nav class="nav-buttons" aria-label="Pattern navigation">
+            <a href="#" id="prev-link" class="btn small-btn">
+                <span aria-hidden="true">❮ </span><span data-i18n="prev">Previous</span>
+            </a>
+            <a href="#" id="next-link" class="btn small-btn">
+                <span data-i18n="next">Next</span><span aria-hidden="true"> ❯</span>
+            </a>
         </nav>
 
         <nav aria-label="Home">

@@ -41,18 +41,32 @@ p {
     margin-bottom: -15px;
 }
 
-.text-block {
-    font-size: var(--font-size-base);
-    white-space: pre-line;
-    margin: 0 0 1em 0;
-    line-height: var(--line-height-text);
-    text-align: justify;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    word-break: break-word;
-}
-
 .text-block-tight {
     margin: -0.8rem 0 var(--spacing-lg) 0;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.custom-list li {
+    position: relative;
+    font-size: var(--font-size-base);
+}
+
+.custom-list-small,
+.custom-list-small-bullet {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list-small li,
+.custom-list-small-bullet li {
+    font-size: var(--font-size-small);
+    text-align: justify;
+}
+
+.custom-list-small-bullet li::before {
+    content: "• ";
 }
