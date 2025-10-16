@@ -20,7 +20,7 @@
   "patternList": "Naqshlar ro‘yxati",
   "descriptionLabel": "Tiflo-izoh",
   
-  "pattern1.title": "Majnun-Bed\n(Majnuntol)",
+  "pattern1.title": "Majnun-Bed<br>(Majnuntol)",
   "pattern1.context": "XIX – XX-asrlarda Buxorolik ayollar kaltapo‘shak, uning ustidan esa zar iplar bilan bezatilgan peshonabandni taqishgan.\nKaltapo‘shak - dumaloq shakldagi ayollar bosh kiyim. Uning orqasida, ichki tarafdan cho‘ntakcha bo‘lib, unga uzun sochlarni yashirish mumkin. Ko‘pincha, kaltapo‘shaklarni naqshinkor tasmalar bilan bezashadi.\nPeshonaband buxorolik ayollarning o‘ziga xos, peshonaga bog‘lanadigan bezagi. U oltin iplarda naqsh tushirilgan tasmaga o‘xshaydi. Peshonabandni kaltapo‘shak qalpoqchasi ustidan bog‘laydilar.\nUshbu zardo‘zlikning asosiy naqshi majnun-bed bo‘lgan.\nMajnun – muhabbat dardiga mubtalo bo‘lgan, qayg‘uga berilgan yigitning ismi. Xalq ijodida majnuntol mehr va qayg‘u timsoli sifatida qabul qilinadi.\nMutaxassislar fikricha, zardo‘z ayollar bu naqshni tikib, o‘z mahbublariga his-tuyg‘ularini izhor etganlar. ",
   "pattern1.alt": "Naqsh «Majnun-Bed» (Majnuntol). Quyida batafsil ta’rif berilgan",
   "pattern1.caption": "Zardo‘zlik San’anti\nBuxoro",
@@ -32,7 +32,7 @@
   "pattern2.caption": "Abr Matolar\nBuxoro",
   "pattern2.description": "Naqsh shakliga ko‘ra lola gulini eslatadi. Uni yaratish uchun oq va qizil rangdagi iplar qo‘llanladi. Naqsh o‘rtasida – uch yaproqli lola guli. O‘ng va chap tomonida simmetrik tarzda barglarga o‘xshash ikkita burama mavjud. Har bir barg va gul yaproqlaridan yuqoriga qaragan ingichka vertikal chiziqlar ketgan. Har bir chiziq oxirida – oval shaklidagi kichik g‘unchalar bo‘lib, ular gulchangi qo‘ngan changchiga o‘xshaydi.",
 
-  "pattern3.title": "Tumorcha\n(Tumor)",
+  "pattern3.title": "Tumorcha<br>(Tumor)",
   "pattern3.context": "Tumorcha naqshi to‘rtburchak Jizzax so‘zanasining burchaklariga tikiladi.\nSo‘zana - turli naqshlar bezab tikilgan paxta yoki ipak matosi. So‘zana bugungi kunga qadar turli maqsadlarda qo‘llanib kelmoqda: mebel yoki ro‘zg‘or buyumlari uchun yopinchiq, to‘shak uchun choyshab, devor bezagi.\nTo‘rtta naqsh markazdagi katta aylana shaklidagi naqshni – to‘pbarggulni o‘rab turadi.\nTo‘pbarggul - shaklan aylanaga yaqin bo‘lgan naqsh bo‘lib, uning ichiga boshqa naqshlar joylanadi. U shaklan ochilgan gulga o‘xshagani sababli unga shunday nom berilgan (ba’zi o‘simliklarning barglar joylashuvi shakli ham “to‘pbarggul” deb ataladi).\nBunday tumor odamlarni va ularning xonadonini yomonlikdan saqlay oladi degan naql bor.",
   "pattern3.alt": "Naqsh «Tumorcha» (Tumor). Quyida batafsil ta’rif berilgan",
   "pattern3.caption": "Kashta\nJizzax",
@@ -44,7 +44,7 @@
   "pattern4.caption": "Gilamdo‘zlik\nQashqadaryo Viloyati\nUsta: M. G‘ulomov",
   "pattern4.description": "Tanishish uchun naqshni gorizontal ravishda, tartib raqami o‘ng tarafda bo‘ladigan holatda qo‘yish kerak. Naqsh katta to‘g‘ri to‘rtburchakka o‘xshaydi. Uning markazida — och rangli romb, uning yuqori va pastki burchaklari to‘g‘ri to‘rtburchak chegaralarigacha boradi, lekin unga tegmaydi. Och rangli romb ichida — kichikroq sariq rangdagi, qora konturga ega romb joylashgan. Sariq romb markazida — kichkina qizil aylana. Rombning ikkita boshqa burchagidan yon chekkalarga keng och rangli chiziqlar o‘tgan. Ular naqsh chekkalarigacha borib, qo‘y shoxini eslatuvchi buramalarga aylanadi.",
 
-  "pattern5.title": "Kalampir Nusxa\n(Qalampir Naqshi)",
+  "pattern5.title": "Kalampir Nusxa<br>(Qalampir Naqshi)",
   "pattern5.context": "Farg‘ona vodiysida erkaklarning do‘ppisi to‘rt burchak shaklida, qora rangda bo‘lib, qalampir nusxa naqshlari bilan bezatiladi. Odatda naqsh oq iplarda tikiladi.\nNaqshning bunday nomiga sabab — u shaklan uzonchoq qalampirni eslatadi. Azaldan qalampir hayot timsoli bo‘lib, odamlarni yomon nazardan himoya qiladi deb hisoblanadi.",
   "pattern5.alt": "Naqsh «Kalampir Nusxa» (Qalampir Naqshi). Quyida batafsil ta’rif berilgan",
   "pattern5.caption": "Bosh Kiyimlari\nMarg‘ilon",
@@ -86,7 +86,7 @@
   "pattern11.caption": "Kashta\nSamarqand",
   "pattern11.description": "Rafida — qizil rangli, ingichka poyadagi yirik, yarim yumaloq gul bo‘lib, mayda barglari juda ko‘p. Uning markazida yana bir gul joylashgan bo‘lib, uning yettita olovrangli bargi bor, o‘rtasida esa yana besh yaproq joylashgan. Uning yuqorisida gulni eslatadigan uchta shakl joylashgan, ulardan har birida uchta nayza uchli bargi bor.",
 
-  "pattern12.title": "Qalqon Oy Nusxa\n(Qalqon Va Oy)",
+  "pattern12.title": "Qalqon Oy Nusxa<br>(Qalqon Va Oy)",
   "pattern12.context": "Qashqadaryo gilamdo‘zlari “oy gilam” gilamlarini to‘qiydilar, ularni “qiz gilam” deb ham ataydilar. Ularni qizlarning to‘yiga sovg‘a qilishadi. Gilamning markaziy qismida qaytariladigan “oy nusxa” naqshlari joylashgan.",
   "pattern12.alt": "Naqsh «Qalqon Oy Nusxa» (Qalqon Va Oy). Quyida batafsil ta’rif berilgan",
   "pattern12.caption": "Gilamdo‘zlik\nQashqadaryo Viloyati",
