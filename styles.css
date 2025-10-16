@@ -1,61 +1,70 @@
-/* Global styles */
+
+/* ========================================
+   CSS Custom Properties (Variables)
+   ======================================== */
+:root {
+    /* Colors */
+    --color-bg: #232323;
+    --color-text: #e3e3e3;
+    --color-text-muted: #959595;
+    --color-primary: #276075;
+    --color-primary-hover: #277567;
+    --color-accent: #82bdb3;
+    --color-disabled: #444;
+    --color-button-secondary: #474747;
+    --color-button-secondary-hover: #2c2c2c;
+    --color-language-button: #e3e3e3;
+    --color-language-button-text: #000000;
+    --color-language-button-hover: #5c5c5c;
+
+    /* Typography */
+    --font-family-base: Arial, sans-serif;
+    --font-size-base: 18px;
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-subtitle: 50px;
+    --font-size-footer: 14px;
+    --line-height-base: 1.6;
+    --line-height-text: 1.8;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+
+    /* Layout */
+    --content-max-width: 800px;
+    --button-border-radius: 6px;
+    --button-padding: 15px;
+    --button-padding-small: 12px;
+    --button-padding-tiny: 10px;
+
+    /* Transitions */
+    --transition-base: 0.3s;
+    --transition-transform: 0.2s;
+}
+
+/* ========================================
+   Base Styles
+   ======================================== */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family-base), serif;
     margin: 0;
     padding: 20px;
-    line-height: 1.6;
-    /*background-color: #f9f9f9;*/
-    /*color: #505050;*/
-    background-color: #232323;
-    color: #e3e3e3;
+    line-height: var(--line-height-base);
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
-.text-block {
-    font-size: 18px;
-    white-space: pre-line;
-    margin: 0 0 1em 0;
-    line-height: 1.8;
-    text-align: justify;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    word-break: break-word;
+body.preload {
+    visibility: hidden;
 }
 
-.link {
-    font-size: 18px;
-    color: #e3e3e3;
-    text-decoration: underline;
-    text-decoration-style: dotted;
-}
-
-.link:hover {
-    text-decoration: underline;
-    color: #82bdb3;
-}
-
-.small-link {
-    color: #e3e3e3;
-    text-decoration: underline;
-    text-decoration-style: dotted;
-
-}
-
-.small-link:hover {
-    text-decoration: underline;
-}
-
-div p {
-    margin: 0 0 1em 0;
-    line-height: 1.8;
-    text-align: justify;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    word-break: break-word;
-}
-
-/* Header */
+/* ========================================
+   Typography
+   ======================================== */
 h1 {
     text-align: center;
     margin-bottom: 30px;
@@ -78,146 +87,23 @@ h4 {
     text-align: right;
 }
 
-.buttons-container {
-    margin: 4rem 0 0 0;
-}
-
-/* File list */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 -0.5rem 0 -0.5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-/* Link-buttons */
-nav ul li a {
-    display: block;
-    padding: 15px;
+.subtitle {
+    font-size: var(--font-size-subtitle);
     text-align: center;
-    /*background-color: #0099cc;*/
-    /*color: #fff;*/
-    background-color: #276075;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
-    text-transform: uppercase;
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
-/* Hover and focus for accessibility */
-nav ul li a:hover,
-nav ul li a:focus {
-    /*background-color: #004599;*/
-    background-color: #277567;
-    /*outline: 3px solid #222;*/
-    /*outline-offset: 2px;*/
-    transform: translateY(-2px);
+.section-heading {
+    margin-bottom: -15px;
 }
 
-nav ul li a.disabled {
-    pointer-events: none;
-    opacity: 0.5;
-    background-color: #444;
-}
-
-/* Container: keep items on one line; allow horizontal scroll if too narrow.
-   We purposely do NOT wrap: user requested same-line on mobile & desktop. */
-.nav-buttons {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin: 0.5rem 0 1rem 0;
-}
-
-.nav-buttons a {
-    flex: 1;
-    text-align: center;
-    padding: 15px;
-    background-color: #276075;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
-    text-transform: uppercase;
-}
-
-/* Hover */
-.nav-buttons a:hover,
-.nav-buttons a:focus {
-    background-color: #277567;
-    transform: translateY(-2px);
-}
-
-.nav-buttons a.disabled {
-    pointer-events: none;
-    opacity: 0.5;
-    background-color: #444;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 480px) {
-    nav ul li a {
-        font-size: 14px;
-        padding: 12px;
-    }
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    color: #959595;
-    font-size: 14px;
-}
-
-/* Special style for the first button */
-nav ul li.full-width {
-    grid-column: 1 / -1;
-}
-
-nav ul li.full-width-single {
-    grid-column: 1 / -1;
-    margin: 1rem 0 1rem 0;
-}
-
-/* Style for elements with multi-line text */
-[data-i18n="introduction"] {
-    font-size: 18px;
+/* ========================================
+   Text Blocks
+   ======================================== */
+.text-block {
+    font-size: var(--font-size-base);
     white-space: pre-line;
-}
-
-/* New styles for <main> and the text inside */
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* Styles for the introduction paragraph (for extra customization) */
-[data-i18n="introduction"] {
-    text-align: justify;
-    line-height: 1.8;
-}
-
-/* Mobile adaptation: remove width limit on small screens */
-@media (max-width: 768px) {
-    main {
-        max-width: 100%;
-        padding: 0 10px;
-    }
-}
-
-/* Styles for paragraphs inside the introduction */
-[data-i18n="introduction"] p {
     margin: 0 0 1em 0;
-    line-height: 1.8;
+    line-height: var(--line-height-text);
     text-align: justify;
     hyphens: auto;
     -webkit-hyphens: auto;
@@ -225,27 +111,52 @@ main {
     word-break: break-word;
 }
 
-/* Mobile adaptation */
-@media (max-width: 768px) {
-    [data-i18n="introduction"] p {
-        margin-bottom: 0.8em;
-        hyphens: auto;
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-    }
+.text-block-tight {
+    margin: -0.8rem 0 var(--spacing-lg) 0;
 }
 
-body.preload {
-    visibility: hidden;
+p {
+    margin: 0 0 1em 0;
+    line-height: var(--line-height-text);
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    word-break: break-word;
+    font-size: var(--font-size-base);
+    white-space: pre-line;
 }
 
-.pattern-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1cm auto;
+/* ========================================
+   Links
+   ======================================== */
+.link {
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    transition: color var(--transition-base);
 }
 
+.link:hover {
+    text-decoration: underline;
+    color: var(--color-accent);
+}
+
+.small-link {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    transition: color var(--transition-base);
+}
+
+.small-link:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   Lists
+   ======================================== */
 .custom-list {
     list-style: none;
     padding-left: 20px;
@@ -254,30 +165,20 @@ body.preload {
 .custom-list li {
     position: relative;
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: var(--font-size-base);
 }
 
-.custom-list-small {
-    list-style: none;
-    padding-left: 0;
-}
-
-.custom-list-small li {
-    position: relative;
-    margin-bottom: 0;
-    font-size: 14px;
-    text-align: justify;
-}
-
+.custom-list-small,
 .custom-list-small-bullet {
     list-style: none;
     padding-left: 0;
 }
 
+.custom-list-small li,
 .custom-list-small-bullet li {
     position: relative;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: var(--font-size-small);
     text-align: justify;
 }
 
@@ -286,18 +187,92 @@ body.preload {
     margin-right: 0.5em;
 }
 
-.centered {
-    margin: 0;
-    height: 100vh; 
+/* ========================================
+   Navigation - Main Grid
+   ======================================== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 calc(-1 * var(--spacing-xs)) 0 calc(-1 * var(--spacing-xs));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+nav ul li a {
+    display: block;
+    padding: var(--button-padding);
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: var(--button-border-radius);
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    transition: background-color var(--transition-base), transform var(--transition-transform);
+    text-transform: uppercase;
+    margin: var(--spacing-xs);
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+nav ul li a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    background-color: var(--color-disabled);
+}
+
+nav ul li.full-width {
+    grid-column: 1 / -1;
+}
+
+nav ul li.full-width-single {
+    grid-column: 1 / -1;
+    margin: var(--spacing-sm) 0;
+}
+
+/* ========================================
+   Navigation - Inline Buttons
+   ======================================== */
+.nav-buttons {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin: var(--spacing-xs) 0 var(--spacing-sm) 0;
 }
 
-.centered nav {
-    width: 350px;
+.nav-buttons a {
+    flex: 1;
+    text-align: center;
+    padding: var(--button-padding);
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: var(--button-border-radius);
+    font-size: var(--font-size-small);
+    font-weight: bold;
+    transition: background-color var(--transition-base), transform var(--transition-transform);
+    text-transform: uppercase;
 }
 
+.nav-buttons a:hover,
+.nav-buttons a:focus {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+.nav-buttons a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    background-color: var(--color-disabled);
+}
+
+/* ========================================
+   Language Selection
+   ======================================== */
 nav ul ul.language {
     grid-column: 1 / -1;
 }
@@ -315,60 +290,86 @@ nav ul li.language a {
     display: block;
     padding: 25px;
     text-align: center;
-    background-color: #e3e3e3;
-    color: #000000;
+    background-color: var(--color-language-button);
+    color: var(--color-language-button-text);
     text-decoration: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: var(--button-border-radius);
+    font-size: var(--font-size-medium);
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color var(--transition-base), color var(--transition-base), transform var(--transition-transform);
     text-transform: uppercase;
 }
 
 nav ul li.language a:hover,
 nav ul li.language a:focus {
-    background-color: #5c5c5c;
-    color: #e3e3e3;
+    background-color: var(--color-language-button-hover);
+    color: var(--color-text);
     transform: translateY(-2px);
 }
 
-
-.right-button {
-    display: inline-block;
-    padding: 10px 10px;
-    background-color: #474747;
-    color: #f1f1f1;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s, transform 0.2s;
-    margin-left: auto;
+/* ========================================
+   Special Buttons
+   ======================================== */
+.buttons-container {
+    margin: var(--spacing-xl) 0 0 0;
 }
 
 .right-button-container {
     display: flex;
 }
 
+.right-button {
+    display: inline-block;
+    padding: var(--button-padding-tiny);
+    background-color: var(--color-button-secondary);
+    color: #f1f1f1;
+    text-decoration: none;
+    border-radius: var(--button-border-radius);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color var(--transition-base), transform var(--transition-transform);
+    margin-left: auto;
+}
+
 .right-button:hover,
 .right-button:focus {
-    background-color: #2c2c2c;
+    background-color: var(--color-button-secondary-hover);
     transform: translateY(-2px);
     outline-offset: 2px;
 }
 
-.subtitle {
-    font-size: 50px;
-    text-align: center;
+/* ========================================
+   Layout & Containers
+   ======================================== */
+main {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-.text-block-tight {
-    margin: -0.8rem 0 2rem 0
+.centered {
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.section-heading {
-    margin-bottom: -15px;
+.centered nav {
+    width: 350px;
+}
+
+/* ========================================
+   Images & Figures
+   ======================================== */
+.pattern-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1cm auto;
+}
+
+figure {
+    margin: var(--spacing-xl) var(--spacing-md);
 }
 
 figcaption {
@@ -377,6 +378,29 @@ figcaption {
     text-align: right;
 }
 
-figure {
-    margin: 4rem 1.5rem 4rem 1.5rem;
+/* ========================================
+   Footer
+   ======================================== */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-footer);
+}
+
+/* ========================================
+   Media Queries
+   ======================================== */
+@media (max-width: 768px) {
+    main {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: var(--font-size-small);
+        padding: var(--button-padding-small);
+    }
 }
